@@ -54,6 +54,7 @@ main{
     position: relative;
     overflow-x: hidden;
     overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 .landing,
 .sec_2,
@@ -168,11 +169,28 @@ blockquote{
     position: absolute;
     bottom: 0;
     right: 0;
-    background-color: var(--combo);
     height: 5px;
     width: 5px;
+    background-color: var(--combo);
 }
 
+.btn>span{
+    position: absolute;
+    top: 0;
+    left: -120%;
+    height: 100%;
+    width: 110%;
+    transform: skewX(-15deg);
+    background-color: var(--combo);
+    z-index: -1;
+    transition: 0.3s;
+}
+.btn:hover>span{
+    left: -5%;
+}
+.btn:hover{
+    color: black;
+}
 
 .sec_2{
     /* height: 100vh; */
