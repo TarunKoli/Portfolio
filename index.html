@@ -118,23 +118,28 @@
         <section class="sec_4">
             <h1 class="sec4_head">About</h1>
             <div class="sec4_wrapper">
-                <div>
-                    <blockquote class="tab1">&lt;h2&gt;</blockquote>
-                    <h1 class="tab3">Me, Myself and I</h1>
-                    <blockquote class="tab1">&lt;/h2&gt;</blockquote>
+                <div class="sec4_box1">
+                    <div>
+                        <blockquote class="tab1">&lt;h2&gt;</blockquote>
+                        <h1 class="tab3">Me, Myself and I</h1>
+                        <blockquote class="tab1">&lt;/h2&gt;</blockquote>
+                    </div>
+                    <div>
+                        <blockquote class="tab1">&lt;p&gt;</blockquote>
+                        <p class="tab3">Since Adobe Flash was a complete innovation, alongside with CSS 1.0 and HTML 4.01 as standards
+                            of the current web I've been passionate about web.
+                            <br /><br />
+                            For over a decade I had many opportunities to work in a vast spectrum of web technologies what
+                            let me gather a significant amount of various experience. Working for companies and individuals
+                            around the globe I met and learnt from amazing and ambitious people.
+                            <br /><br />
+                            I currently work remotely with a selected freelance client base being open for new opportunities.
+                            </p>
+                        <blockquote class="tab1">&lt;/p&gt;</blockquote>
+                    </div>
                 </div>
-                <div>
-                    <blockquote class="tab1">&lt;p&gt;</blockquote>
-                    <p class="tab3">Since Adobe Flash was a complete innovation, alongside with CSS 1.0 and HTML 4.01 as standards
-                        of the current web I've been passionate about web.
-                        <br /><br />
-                        For over a decade I had many opportunities to work in a vast spectrum of web technologies what
-                        let me gather a significant amount of various experience. Working for companies and individuals
-                        around the globe I met and learnt from amazing and ambitious people.
-                        <br /><br />
-                        I currently work remotely with a selected freelance client base being open for new opportunities.
-                        </p>
-                    <blockquote class="tab1">&lt;/p&gt;</blockquote>
+                <div class="sec4_box2">
+                    <span class="Sphere"></span>
                 </div>
             </div>
             <div class="scroll_down">
@@ -272,5 +277,38 @@
         </section>
 
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
+    <script>
+        const Texts = [
+            'HTML', 'CSS', 'Javascript',
+            'Typescript', 'Mongoose', 'ReactJS',
+            'C++', 'SASS','JSON','Tailwind','REST',
+            'ES5/ES6', 'NodeJS', 'MongoDB','Git',
+            'Express', 'SQL', 'jQuery', 'Wordpress'
+        ];
+
+        var tagCloud = TagCloud('.Sphere', Texts, {
+
+            // Sphere radius in px
+            radius: 350,
+
+            // animation speed
+            // slow, normal, fast
+            maxSpeed: 'normal',
+            initSpeed: 'fast',
+
+            // Rolling direction [0 (top) , 90 (left), 135 (right-bottom)] 
+            direction: 135,
+
+            // interaction with mouse or not [Default true (decelerate to rolling init speed, and keep rolling with mouse).]
+            keep: true
+
+        });
+
+        // Giving color to each text in sphere
+        var color = '#FF662B';
+        document.querySelector('.Sphere').style.color = color;
+    </script>
 </body>
 </html>

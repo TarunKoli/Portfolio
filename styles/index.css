@@ -198,7 +198,7 @@ blockquote{
     flex-basis: 65%;
 }
 .sec2_wrapper div:first-child h1,
-.sec4_wrapper div:first-child h1,
+.sec4_box1 div:first-child h1,
 .box1 div:first-child h1,
 .form div:first-child h1{
     font-size: 6.4rem;
@@ -209,7 +209,7 @@ blockquote{
     font-weight: bolder;
 }
 .sec2_wrapper div:last-child p,
-.sec4_wrapper div:last-child p,
+.sec4_box1 div:last-child p,
 .box1 div:last-child p,
 .form p{
     color: var(--text-white);
@@ -291,14 +291,34 @@ blockquote{
 .sec4_head{
     position: absolute;
     color: var(--text-dark);
-    left: -5%;
-    top: -40%;
+    left: -4%;
+    top: -32%;
     font-size: 35rem;
     letter-spacing: -1rem;
     z-index: -1;
 }
-.sec4_wrapper div:last-child p{
-    max-width: 35%;
+.sec4_wrapper{
+    /* border: 2px solid red; */
+    display: flex;
+}
+.sec4_box1{
+    flex-basis: 40%;
+    /* border: 2px solid white; */
+}
+.sec4_box2{
+    flex-basis: 60%;
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+}
+.sec4_box2 .Sphere{
+    margin-top: -17%;
+    font-weight: 700;
+}
+.sec4_box1 div:last-child p{
+    max-width: 85%;
     line-height: 2.3rem;
 }
 .sec_4 .scroll_down{
@@ -307,14 +327,14 @@ blockquote{
 
 .sec_5{
     width: 100%;
-    margin-top: 10%;
+    margin-top: 8%;
     position: relative;
 }
 .sec5_head{
     position: absolute;
     color: var(--text-dark);
     left: -3%;
-    top: -17%;
+    top: -20%;
     font-size: 35rem;
     letter-spacing: -1rem;
     z-index: -1;
