@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+:root {
+  --nav-bg: #2B3038;
+  --main-theme: #20242a;
+  --combo: #FF662B;
+  --combo-light: rgba(255, 102, 43,0.75);
+  --text-white: #ffffff;
+  --text-grey:#6C7A8A;
+  --text-dark:rgba(43, 48, 56,0.4);
+  --roboto:'Roboto', sans-serif;
+  --courgette:'Courgette', cursive;
+  --source-pro:'Source Code Pro', monospace;
+  --manrope: 'Manrope', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+@media (max-width: 770px) {
+  #structure {
+    display: block;
+  }
+  #cover {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 350px) {
+  html {
+    font-size: 40%;
+  }
+}
