@@ -83,7 +83,7 @@
         <div class="sec2_wrapper">
           <div>
             <blockquote class="tab1">&lt;h2&gt;</blockquote>
-            <h1 class="tab3">My Portfolio</h1>
+            <h1 class="el1 tab3">My Portfolio</h1>
             <blockquote class="tab1">&lt;/h2&gt;</blockquote>
           </div>
           <div>
@@ -155,7 +155,7 @@
           <div class="sec4_box1">
             <div>
               <blockquote class="tab1">&lt;h2&gt;</blockquote>
-              <h1 class="tab3">Me, Myself and I</h1>
+              <h1 class="el1 tab3">Me, Myself and I</h1>
               <blockquote class="tab1">&lt;/h2&gt;</blockquote>
             </div>
             <div>
@@ -198,7 +198,7 @@
           <div class="box1">
             <div>
               <blockquote class="tab1">&lt;h2&gt;</blockquote>
-              <h1 class="tab3">Skills &<br />Experience</h1>
+              <h1 class="el1 tab3">Skills &<br />Experience</h1>
               <blockquote class="tab1">&lt;/h2&gt;</blockquote>
             </div>
             <div>
@@ -280,7 +280,7 @@
           <div class="form">
             <div>
               <blockquote class="tab1">&lt;h2&gt;</blockquote>
-              <h1 class="tab3">Contact me</h1>
+              <h1 class="el1 tab3">Contact me</h1>
               <blockquote class="tab1">&lt;/h2&gt;</blockquote>
             </div>
             <div>
@@ -385,25 +385,35 @@
     </script>
 
     <script>
-      var textWrapper = document.querySelectorAll(".el1");
+        var text1 = document.querySelectorAll(".el1");
+        // var text2 = document.querySelectorAll('.el2');
 
-      textWrapper.forEach((ltr) => {
-        ltr.innerHTML = ltr.textContent.replace(
-          /\S/g,
-          "<span class='letter'>$&</span>"
-        );
-      });
+        function break_letters(textWrapper){
+            textWrapper.forEach((ltr) => {
+                ltr.innerHTML = ltr.textContent.replace(
+                /\S/g,
+                "<span class='letter'>$&</span>"
+                );
+            });
+        }
 
-      anime.timeline({ loop: false }).add({
-        targets: ".el1 .letter",
-        scale: [0, 1],
-        opacity: [0, 1],
-        translateZ: 0,
-        easing: "spring(1, 1000, 10, 0)",
-        elasticity: 600,
-        duration: 950,
-        delay: (el, i) => 100 * i,
-      });
+        function animate_head(elm){
+            anime.timeline({ loop: false }).add({
+                targets: elm,
+                scale: [0, 1],
+                opacity: [0, 1],
+                translateZ: 0,
+                easing: "spring(1, 1000, 10, 0)",
+                elasticity: 600,
+                duration: 950,
+                delay: (el, i) => 100 * i,
+            });
+        }
+
+        break_letters(text1);
+        // break_letters(text2);
+        animate_head(".landing .el1 .letter");
+
 
       var letters = document.querySelectorAll(".letter");
 
@@ -428,12 +438,40 @@
               scaleX: [1.3, 1],
               easing: "spring(1, 1000,5, 0)",
               // elasticity: 600,
-              duration: 300,
+              duration: 100,
             });
 
           letter.removeEventListener("mousemove", () => {});
         });
       });
+    
+      var sections = document.querySelectorAll('section');
+      var main = document.querySelector('main');
+      var visit = new Map();
+      visit.set('landing',true);
+
+      main.addEventListener('scroll',()=>{ 
+            
+            sections.forEach((sec,i)=>{
+                var viewHeight = document.documentElement.clientHeight;
+                var viewWidth = document.documentElement.clientWidth;
+                var dim = sec.getBoundingClientRect();
+                
+                if(dim.y < viewHeight-100 && dim.y > (viewHeight-100)*-1){
+                  
+                    if(!visit.get(sec.className)){
+                        visit.set(sec.className,true);
+                        let c_name = `.${sec.className} .el1 .letter`;
+                        animate_head(c_name)
+                    }
+
+                }
+                                
+            })
+
+        })
+    
+
     </script>
   </body>
 </html>

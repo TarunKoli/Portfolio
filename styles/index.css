@@ -71,7 +71,6 @@ main{
     top: -8%;
     right: -3%;
     font-size: 25rem;
-    /* font-family: var(--manrope); */
     color: var(--text-dark);
     letter-spacing: -0.5rem;
 }
@@ -129,24 +128,12 @@ blockquote{
     font-weight: bolder;
     font-family: var(--manrope);
 }
-.el1 .letter{
+.letter{
+    opacity: 0;
     display: inline-block;
     line-height: 1em;
     font-family: var(--manrope);
 }
-/* .intro h1>span{
-    font-size: 9rem;
-    position: relative;
-    color: var(--nav-bg);
-    z-index: 5;
-}
-.intro h1>span::before{
-    content:'T';
-    position: absolute;
-    color: var(--combo);
-    left: 15%;
-    z-index: 2;
-} */
 .landing h4{
     font-family: var(--source-pro);
     color: #9F9DA5;
