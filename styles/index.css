@@ -129,7 +129,12 @@ blockquote{
     font-weight: bolder;
     font-family: var(--manrope);
 }
-.intro h1>span{
+.el1 .letter{
+    display: inline-block;
+    line-height: 1em;
+    font-family: var(--manrope);
+}
+/* .intro h1>span{
     font-size: 9rem;
     position: relative;
     color: var(--nav-bg);
@@ -141,7 +146,7 @@ blockquote{
     color: var(--combo);
     left: 15%;
     z-index: 2;
-}
+} */
 .landing h4{
     font-family: var(--source-pro);
     color: #9F9DA5;
