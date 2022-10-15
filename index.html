@@ -11,8 +11,179 @@
     <link rel="stylesheet" href="./styles/global.css" />
     <link rel="stylesheet" href="./styles/index.css" />
     <title>Portfolio</title>
+
+      <style>
+
+        body{
+          position: relative;
+        }
+        
+        .prompt{
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          left: -100%;
+          bottom: -100%;
+          background: var(--combo);
+          z-index: 50;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+        }
+        
+        .prompt_wrap{
+          height: 50%;
+          width: 50%;
+          background: var(--main-theme);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        @keyframes promfy{
+          0%{
+            left: -100%;
+            bottom: -100%;
+            border-top-right-radius: 100%;
+          }
+          90%{
+            left: 0%;
+            bottom: 0%;
+          }
+          100%{
+            left: 0%;
+            bottom: 0%;
+            border-top-right-radius: 0%;
+          }
+        }
+
+        @keyframes wrapfy {
+          0%{
+            height: 50%;
+            width: 50%;
+            border-top-right-radius: 100%;
+          }
+          90%{
+            height: 100%;
+            width: 100%;
+          }
+          100%{
+            height: 100%;
+            width: 100%;
+            border-top-right-radius: 0%;
+          }
+        }
+
+        @keyframes wrapfy2 {
+          0%{
+            height: 100%;
+            width: 100%;
+            border-bottom-left-radius: 0%;
+          }
+          35%{
+            border-bottom-left-radius: 100%;
+          }
+          100%{
+            height: 50%;
+            width: 50%;
+            border-bottom-left-radius: 100%;
+          }
+        }
+       
+
+        @keyframes promfy2{
+          0%{
+            left: 0%;
+            bottom: 0%;
+            border-bottom-left-radius: 0%;
+          }
+          35%{ 
+            border-bottom-left-radius: 100%;
+          }
+          100%{
+            left: 100%;
+            bottom: 100%;
+            border-bottom-left-radius: 100%;
+          }
+        }
+
+        .prompt_box1{
+          flex-basis: 55%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+        }
+        .p_snap{
+          position: absolute;
+          left: 10%;
+          top: 50%;
+          transform: translateY(-50%);
+          height: 70%;
+          width: 105%;
+          background: var(--nav-bg);
+          border: 1rem solid var(--combo);
+          z-index: 55;
+          opacity: 0;
+          transition: 0.1s;
+        }
+        .prompt_box2{
+          flex-basis: 45%;
+          height: 100%;
+          padding: 4rem;
+        }
+        .p_details{
+          height: 100%;
+          width: 100%;
+          background-color: var(--nav-bg);
+          position: relative;
+          opacity: 0;
+          transition: 0.1s;
+        }
+
+        .p_details::before{
+          content: '';
+          position: absolute;
+          right: -8.5%;
+            top: -8.5%;
+            height: 10rem;
+            width: 10rem;
+          transform: rotate(-45deg);
+          background: var(--main-theme);
+        }
+     
+        .p_details .close{
+          position: absolute;
+          right: 0;
+          top: 0;
+          background: var(--combo);
+          height: 6rem;
+          width: 6rem;
+          border: none;
+          border-radius: 50%;
+          font-size: 2rem;
+          cursor: pointer;
+        }
+      </style>
+
   </head>
   <body>
+
+    <div class="prompt">
+      <div class="prompt_wrap">
+        <div class="prompt_box1">
+          <div class="p_snap"></div>
+        </div>
+        <div class="prompt_box2">
+          <div class="p_details">
+            <button class="close"><i class="fa fa-solid fa-xmark"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <nav>
       <div class="logo"></div>
       <ul>
@@ -411,15 +582,8 @@
             });
         }
 
-        break_letters(text1);
-        // break_letters(text2);
-        animate_head(".landing .el1 .letter");
-
-
-      var letters = document.querySelectorAll(".letter");
-
-      letters.forEach((letter) => {
-        letter.addEventListener("mouseenter", () => {
+        function hover_letter(letter){
+          letter.addEventListener("mouseenter", () => {
           anime.remove(letter);
 
           anime
@@ -444,6 +608,17 @@
 
           letter.removeEventListener("mousemove", () => {});
         });
+        }
+
+        break_letters(text1);
+        // break_letters(text2);
+        animate_head(".landing .el1 .letter");
+
+
+      var letters = document.querySelectorAll(".letter");
+
+      letters.forEach((letter) => {
+        hover_letter(letter);
       });
     
       var sections = document.querySelectorAll('section');
@@ -474,5 +649,59 @@
     
 
     </script>
+
+    <script>
+
+      const prompty = document.querySelector('.prompt');
+      const prompt_wrap = document.querySelector('.prompt_wrap');
+      const projects = document.querySelectorAll('.project');
+      const btn = document.querySelector('.close');
+
+      projects.forEach((pj)=>{
+        pj.addEventListener('click',()=>{
+          
+          prompty.style.animation='promfy 1s ease-in-out forwards';
+          prompt_wrap.style.animation='wrapfy 1s ease-in-out forwards';
+          
+          anime.timeline({ loop: false })
+            .add({
+              targets: '.p_details',
+              translateX:[-750,0],
+              translateY: [750,0],
+              opacity:1,
+              easing: "easeInOutExpo",
+              elasticity: 600,
+              duration: 1500,
+              delay: 500
+            })
+            .add({
+              targets: '.close',
+              scaleX:[0,1],
+              scaleY:[0,1],
+              duration:100,
+              easing: "spring(1, 1000,5, 0)",
+            });
+
+            anime.timeline({ loop: false })
+            .add({
+              targets: '.p_snap',
+              opacity:1,
+              easing: "easeInOutExpo",
+              elasticity: 600,
+              duration: 1500,
+              delay: 1000
+            })
+        })
+      })
+
+      btn.addEventListener('click',()=>{
+        prompty.style.animation='promfy2 1s ease-in-out forwards';
+        prompt_wrap.style.animation='wrapfy2 1s ease-in-out forwards';
+        document.querySelector('.p_snap').style.opacity=0;
+        document.querySelector('.p_details').style.opacity=0;
+      })
+
+    </script>
+
   </body>
 </html>
