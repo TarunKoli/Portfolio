@@ -10,163 +10,7 @@
     />
     <link rel="stylesheet" href="./styles/global.css" />
     <link rel="stylesheet" href="./styles/index.css" />
-    <title>Portfolio</title>
-
-      <style>
-
-        body{
-          position: relative;
-        }
-        
-        .prompt{
-          position: absolute;
-          height: 100%;
-          width: 100%;
-          left: -100%;
-          bottom: -100%;
-          background: var(--combo);
-          z-index: 50;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          overflow: hidden;
-        }
-        
-        .prompt_wrap{
-          height: 50%;
-          width: 50%;
-          background: var(--main-theme);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        @keyframes promfy{
-          0%{
-            left: -100%;
-            bottom: -100%;
-            border-top-right-radius: 100%;
-          }
-          90%{
-            left: 0%;
-            bottom: 0%;
-          }
-          100%{
-            left: 0%;
-            bottom: 0%;
-            border-top-right-radius: 0%;
-          }
-        }
-
-        @keyframes wrapfy {
-          0%{
-            height: 50%;
-            width: 50%;
-            border-top-right-radius: 100%;
-          }
-          90%{
-            height: 100%;
-            width: 100%;
-          }
-          100%{
-            height: 100%;
-            width: 100%;
-            border-top-right-radius: 0%;
-          }
-        }
-
-        @keyframes wrapfy2 {
-          0%{
-            height: 100%;
-            width: 100%;
-            border-bottom-left-radius: 0%;
-          }
-          35%{
-            border-bottom-left-radius: 100%;
-          }
-          100%{
-            height: 50%;
-            width: 50%;
-            border-bottom-left-radius: 100%;
-          }
-        }
-       
-
-        @keyframes promfy2{
-          0%{
-            left: 0%;
-            bottom: 0%;
-            border-bottom-left-radius: 0%;
-          }
-          35%{ 
-            border-bottom-left-radius: 100%;
-          }
-          100%{
-            left: 100%;
-            bottom: 100%;
-            border-bottom-left-radius: 100%;
-          }
-        }
-
-        .prompt_box1{
-          flex-basis: 55%;
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          position: relative;
-        }
-        .p_snap{
-          position: absolute;
-          left: 10%;
-          top: 50%;
-          transform: translateY(-50%);
-          height: 70%;
-          width: 105%;
-          background: var(--nav-bg);
-          border: 1rem solid var(--combo);
-          z-index: 55;
-          opacity: 0;
-          transition: 0.1s;
-        }
-        .prompt_box2{
-          flex-basis: 45%;
-          height: 100%;
-          padding: 4rem;
-        }
-        .p_details{
-          height: 100%;
-          width: 100%;
-          background-color: var(--nav-bg);
-          position: relative;
-          opacity: 0;
-          transition: 0.1s;
-        }
-
-        .p_details::before{
-          content: '';
-          position: absolute;
-          right: -8.5%;
-            top: -8.5%;
-            height: 10rem;
-            width: 10rem;
-          transform: rotate(-45deg);
-          background: var(--main-theme);
-        }
-     
-        .p_details .close{
-          position: absolute;
-          right: 0;
-          top: 0;
-          background: var(--combo);
-          height: 6rem;
-          width: 6rem;
-          border: none;
-          border-radius: 50%;
-          font-size: 2rem;
-          cursor: pointer;
-        }
-      </style>
+    <title>Tarun Koli - Be Creative</title>
 
   </head>
   <body>
@@ -174,11 +18,25 @@
     <div class="prompt">
       <div class="prompt_wrap">
         <div class="prompt_box1">
-          <div class="p_snap"></div>
+          <div class="p_snap">
+            <img src="./assets/project_4.png" alt="project_img">
+          </div>
         </div>
         <div class="prompt_box2">
           <div class="p_details">
-            <button class="close"><i class="fa fa-solid fa-xmark"></i></button>
+            <button class="close"><img src="./assets/times.svg" alt="cross-btn"></button>
+            <div class="details_wrap">
+              <div class="details_head">
+                <h2>Demo Heading <br /> Internship  </h2>
+              </div>
+              <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                 ut aliquip ex ea commodo consequat.<br /><br />Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                 dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                 deserunt mollit anim id est laborum.<br /><br /> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                 ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                 ut aliquip ex ea commodo consequat</p>
+            </div>
           </div>
         </div>
       </div>
@@ -396,28 +254,28 @@
               <div class="meter">
                 <label>Front-end</label>
                 <div class="bar_wrapper">
-                  <div class="counter"></div>
+                  <div class="counter" data-val="80"></div>
                   <div class="progress_bar"></div>
                 </div>
               </div>
               <div class="meter">
                 <label>Back-end</label>
                 <div class="bar_wrapper">
-                  <div class="counter"></div>
+                  <div class="counter" data-val="75"></div>
                   <div class="progress_bar"></div>
                 </div>
               </div>
               <div class="meter">
                 <label>ReactJS</label>
                 <div class="bar_wrapper">
-                  <div class="counter"></div>
+                  <div class="counter" data-val="85"></div>
                   <div class="progress_bar"></div>
                 </div>
               </div>
               <div class="meter">
                 <label>Problem Solving</label>
                 <div class="bar_wrapper">
-                  <div class="counter"></div>
+                  <div class="counter" data-val="75"></div>
                   <div class="progress_bar"></div>
                 </div>
               </div>
@@ -512,196 +370,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
 
-    <script>
-      const Texts = [
-        "HTML",
-        "CSS",
-        "Javascript",
-        "Typescript",
-        "Mongoose",
-        "ReactJS",
-        "C++",
-        "SASS",
-        "JSON",
-        "Tailwind",
-        "REST",
-        "ES5/ES6",
-        "NodeJS",
-        "MongoDB",
-        "Git",
-        "Express",
-        "SQL",
-        "jQuery",
-        "Wordpress",
-      ];
+    <script src="./script/script1.js"></script>
 
-      var tagCloud = TagCloud(".Sphere", Texts, {
-        // Sphere radius in px
-        radius: 350,
+    <script src="./script/script2.js"></script>
 
-        // animation speed
-        // slow, normal, fast
-        maxSpeed: "normal",
-        initSpeed: "fast",
-
-        // Rolling direction [0 (top) , 90 (left), 135 (right-bottom)]
-        direction: 135,
-
-        // interaction with mouse or not [Default true (decelerate to rolling init speed, and keep rolling with mouse).]
-        keep: true,
-      });
-
-      // Giving color to each text in sphere
-      var color = "#FF662B";
-      document.querySelector(".Sphere").style.color = color;
-    </script>
-
-    <script>
-        var text1 = document.querySelectorAll(".el1");
-        // var text2 = document.querySelectorAll('.el2');
-
-        function break_letters(textWrapper){
-            textWrapper.forEach((ltr) => {
-                ltr.innerHTML = ltr.textContent.replace(
-                /\S/g,
-                "<span class='letter'>$&</span>"
-                );
-            });
-        }
-
-        function animate_head(elm){
-            anime.timeline({ loop: false }).add({
-                targets: elm,
-                scale: [0, 1],
-                opacity: [0, 1],
-                translateZ: 0,
-                easing: "spring(1, 1000, 10, 0)",
-                elasticity: 600,
-                duration: 950,
-                delay: (el, i) => 100 * i,
-            });
-        }
-
-        function hover_letter(letter){
-          letter.addEventListener("mouseenter", () => {
-          anime.remove(letter);
-
-          anime
-            .timeline({ loop: false })
-            .add({
-              targets: letter,
-              scaleY: [1, 0.7],
-              scaleX: [1, 1.3],
-              translateZ: 0,
-              easing: "easeInOutExpo",
-              elasticity: 600,
-              duration: 300,
-            })
-            .add({
-              targets: letter,
-              scaleY: [0.7, 1],
-              scaleX: [1.3, 1],
-              easing: "spring(1, 1000,5, 0)",
-              // elasticity: 600,
-              duration: 100,
-            });
-
-          letter.removeEventListener("mousemove", () => {});
-        });
-        }
-
-        break_letters(text1);
-        // break_letters(text2);
-        animate_head(".landing .el1 .letter");
-
-
-      var letters = document.querySelectorAll(".letter");
-
-      letters.forEach((letter) => {
-        hover_letter(letter);
-      });
-    
-      var sections = document.querySelectorAll('section');
-      var main = document.querySelector('main');
-      var visit = new Map();
-      visit.set('landing',true);
-
-      main.addEventListener('scroll',()=>{ 
-            
-            sections.forEach((sec,i)=>{
-                var viewHeight = document.documentElement.clientHeight;
-                var viewWidth = document.documentElement.clientWidth;
-                var dim = sec.getBoundingClientRect();
-                
-                if(dim.y < viewHeight-100 && dim.y > (viewHeight-100)*-1){
-                  
-                    if(!visit.get(sec.className)){
-                        visit.set(sec.className,true);
-                        let c_name = `.${sec.className} .el1 .letter`;
-                        animate_head(c_name)
-                    }
-
-                }
-                                
-            })
-
-        })
-    
-
-    </script>
-
-    <script>
-
-      const prompty = document.querySelector('.prompt');
-      const prompt_wrap = document.querySelector('.prompt_wrap');
-      const projects = document.querySelectorAll('.project');
-      const btn = document.querySelector('.close');
-
-      projects.forEach((pj)=>{
-        pj.addEventListener('click',()=>{
-          
-          prompty.style.animation='promfy 1s ease-in-out forwards';
-          prompt_wrap.style.animation='wrapfy 1s ease-in-out forwards';
-          
-          anime.timeline({ loop: false })
-            .add({
-              targets: '.p_details',
-              translateX:[-750,0],
-              translateY: [750,0],
-              opacity:1,
-              easing: "easeInOutExpo",
-              elasticity: 600,
-              duration: 1500,
-              delay: 500
-            })
-            .add({
-              targets: '.close',
-              scaleX:[0,1],
-              scaleY:[0,1],
-              duration:100,
-              easing: "spring(1, 1000,5, 0)",
-            });
-
-            anime.timeline({ loop: false })
-            .add({
-              targets: '.p_snap',
-              opacity:1,
-              easing: "easeInOutExpo",
-              elasticity: 600,
-              duration: 1500,
-              delay: 1000
-            })
-        })
-      })
-
-      btn.addEventListener('click',()=>{
-        prompty.style.animation='promfy2 1s ease-in-out forwards';
-        prompt_wrap.style.animation='wrapfy2 1s ease-in-out forwards';
-        document.querySelector('.p_snap').style.opacity=0;
-        document.querySelector('.p_details').style.opacity=0;
-      })
-
-    </script>
+    <script src="./script/script3.js"></script>
 
   </body>
 </html>
