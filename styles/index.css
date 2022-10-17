@@ -112,7 +112,7 @@ body {
   height: 70%;
   width: 105%;
   background: var(--nav-bg);
-  border: 1rem solid var(--combo);
+  border: 1rem solid var(--text-grey);
   z-index: 55;
   opacity: 0;
   overflow-y: scroll;
