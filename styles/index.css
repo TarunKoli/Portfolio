@@ -522,24 +522,23 @@ blockquote {
   z-index: -1;
 }
 .sec4_wrapper {
-  /* border: 2px solid red; */
   display: flex;
 }
 .sec4_box1 {
   flex-basis: 40%;
-  /* border: 2px solid white; */
 }
 .sec4_box2 {
   flex-basis: 60%;
-  /* border: 2px solid white; */
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.6rem;
 }
 .sec4_box2 .Sphere {
-  margin-top: -17%;
+  margin-top: -15%;
+  margin-left: 5%;
   font-weight: 700;
+  font-size: 1.8rem;
 }
 .sec4_box1 div:last-child p {
   max-width: 85%;
