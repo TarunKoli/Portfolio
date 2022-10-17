@@ -45,3 +45,9 @@ btn.addEventListener("click", () => {
   document.querySelector(".p_snap").style.opacity = 0;
   document.querySelector(".p_details").style.opacity = 0;
 });
+
+function redirect(link) {
+  const a = document.createElement("a");
+  a.href = `${link}`;
+  a.click();
+}

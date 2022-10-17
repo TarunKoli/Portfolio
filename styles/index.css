@@ -208,6 +208,23 @@ nav {
 }
 nav .logo {
   height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.logo img{
+  height: 50%;
+  width: 50%;
+  cursor: pointer;
+}
+.logo h3{
+  margin-top: 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--text-grey);
+  font-family: var(--courgette);
+  cursor: pointer;
 }
 nav ul {
   width: 100%;
