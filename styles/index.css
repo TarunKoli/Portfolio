@@ -332,6 +332,31 @@ blockquote {
 .intro {
   margin: 5% 0 1% 0;
 }
+.intro_wrapper{
+  display: flex;
+}
+.intro_wrapper .intro_logo{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 1.5%;
+}
+.intro_wrapper img{
+  height: 7rem;
+  opacity: 0;
+  transform-origin: bottom;
+  animation: logo_rotate 0.3s ease-in-out 0.7s forwards;
+}
+@keyframes logo_rotate{
+  0%{
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+  100%{
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
 .intro h1 {
   font-size: 8rem;
   letter-spacing: -5px;
@@ -340,6 +365,9 @@ blockquote {
   font-weight: bolder;
   font-family: var(--manrope);
   margin-left: 2%;
+}
+.intro_wrapper h1:last-child{
+  margin-left: 0;
 }
 .letter {
   opacity: 0;
