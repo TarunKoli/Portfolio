@@ -18,6 +18,7 @@ nav .logo {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background: rgba(0, 0, 0, 0.5);
 }
 .logo img{
   height: 45%;
@@ -633,7 +634,6 @@ form {
     display: none ;
   }
   nav .logo{
-    background: rgba(0, 0, 0, 0.5);
     height: 30%;
   }
   nav .logo h3{
