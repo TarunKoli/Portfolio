@@ -107,7 +107,7 @@
   z-index: 55;
   opacity: 0;
   overflow-y: scroll;
-  transition: 0.1s;
+  transition: 0.2s;
 }
 .p_snap::-webkit-scrollbar {
   display: none;
@@ -129,9 +129,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.1s;
+  transition: 0.2s;
 }
-
 .p_details::before {
   content: "";
   position: absolute;
