@@ -194,40 +194,43 @@
   }
   .prompt_wrap {
     display: block;
+    position: relative;
   }
   .prompt_box1 {
     position: absolute;
-    height: 100%;
-    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80%;
+    width: 80%;
     background: transparent;
+    z-index: 51;
   }
   .p_snap {
     left: 0;
-    height: 80%;
-    width: 80%;
-    z-index: 51;
+    height: 100%;
+    width: 100%;
     opacity: 1;
   }
   .prompt_box2 {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
+    width: 80%;
     height: 100%;
     padding: 0;
-    position: relative;
   }
   .p_details {
+    /* display: none; */
     opacity: 1;
     background: transparent;
     justify-content: flex-end;
 }
 .p_details .details_wrap {
     padding: 2rem;
-    width: 80%;
+    width: 100%;
     background: var(--nav-bg);
-    z-index: 50;
 }
-.details_wrap:hover {
+.prompt_box2:hover {
     animation: front forwards 1s, front2 forwards 1s 0.2s;
 }
 @keyframes front2 {
@@ -235,7 +238,7 @@
         z-index: 50;
     }
     100%{
-        z-index: 55;
+        z-index: 100;
     }
 }
 @keyframes front {
