@@ -429,7 +429,6 @@ blockquote {
 }
 
 .sec_2 {
-  /* height: 100vh; */
   margin-top: 2%;
   position: relative;
 }
@@ -736,10 +735,11 @@ blockquote {
 }
 .map {
   flex-basis: 50%;
-  background: url(../assets/map5.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  position: relative;
+}
+.map img{
+  height: 100%;
+  width: 100%;
 }
 .form input {
   background-color: var(--nav-bg);
@@ -796,6 +796,9 @@ form {
   margin-right: 4%;
 }
 .location {
+  position: absolute;
+  top: 0;
+  left: 0;
   margin: 3rem 4rem;
   width: 23rem;
   background: rgba(0, 0, 0, 0.9);
@@ -814,4 +817,159 @@ form {
 }
 .map_email span {
   color: var(--combo);
+}
+.mob-only{
+  display: none;
+}
+
+@media(max-width:750px) {
+  nav,.no-mob{  
+    display: none ;
+  }
+  .mob-only{
+    display: block;
+  }
+  main{
+    flex-basis: 100%;
+    padding-bottom: 1rem;
+  }
+  .landing,
+  .sec_2,
+  .sec_4,
+  .sec_5 {
+    padding: 1rem;
+  }
+  .intro h1 {
+    font-size: 4.4rem;
+    letter-spacing: -2px;
+    line-height: 5rem;
+    margin-left: 6%;
+  }
+  .landing_wrapper{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+  .intro_wrapper .intro_logo{
+    margin-left:3%;
+  }
+  .intro_wrapper img{
+    height: 4rem;
+  }
+  .landing h4 {
+    font-size: 1.6rem;
+    margin-left: 2.5rem;
+  }
+  .landing .sec_head,
+  .sec2_head,
+  .sec4_head,
+  .sec5_head {
+    top: 10%;
+    right: -3%;
+    font-size: 12rem;
+    letter-spacing: -0.5rem;
+  }
+  .sec2_head{
+    top: 70%;
+  }
+  .sec4_head{
+    top: -2%;
+  }
+  .sec5_head{
+    top: 40%;
+  }
+  .btn{
+    height: 5.5rem;
+    width: 21rem;
+  }
+  .sec2_wrapper div:last-child {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .sec2_wrapper div:last-child div {
+    flex-basis: 100%;
+  }
+  .sec2_wrapper div:first-child h1,
+  .sec4_box1 div:first-child h1,
+  .box1 div:first-child h1,
+  .form div:first-child h1 {
+    font-size: 5rem;
+  }
+  .sec2_wrapper div:last-child p,
+  .sec4_box1 div:last-child p,
+  .box1 div:last-child p,
+  .form p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+  }
+  .tab3{
+    margin: 0;
+    padding: 0 1rem 0 2.5rem;
+  }
+  .sec_3 .project_grid {
+    margin: 1rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  }
+  .sec4_wrapper,
+  .sec5_wrapper,
+  .sec6_wrapper {
+    flex-direction: column;
+  }
+  .sec4_box1,
+  .sec4_box2,
+  .box1,.box2,
+  .form,.map {
+    flex-basis: 100%;
+  }
+  .box2{
+    margin-top: 8%;
+  }
+  .sec4_box2 .Sphere {
+    margin-top: 0%;
+    margin-left: 0;
+    font-weight: 500;
+    font-size: 1.4rem;
+  }
+  .sec4_box1 div:last-child p,
+  .sec5_wrapper .box1 div:last-child p {
+    max-width: 97%;
+    line-height: 2.3rem;
+  }
+  .sec_5 {
+    margin-top: 40%;
+  }
+  .exps {
+    margin-top: 3rem;
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+  .exp {
+    height: 25rem;
+    width: 100%;
+    margin: 1.5rem 0;
+    padding: 3rem;
+    letter-spacing: 1px;
+  }
+  .sec_4 .scroll_down {
+    bottom: -12%;
+  }
+  .form{
+    padding: 0 1rem ;
+  }
+  .input1{
+    flex-direction: column;
+  }
+  .input1 .input_wrap {
+    width: 100%;
+  }
+  .map{
+    margin-top: 1rem;
+  }
+  .location{
+    margin: 0;
+  }
 }
