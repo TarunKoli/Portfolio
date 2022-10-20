@@ -632,6 +632,29 @@ form {
   nav,.no-mob{  
     display: none ;
   }
+  nav .logo{
+    background: rgba(0, 0, 0, 0.5);
+    height: 30%;
+  }
+  nav .logo h3{
+    margin-top: 2.5rem;
+    font-weight: 600;
+  }
+  nav ul li{
+    height: 7rem;
+  }
+  nav ul li span{
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .nav_visible{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+  }
   .mob-only{
     display: block;
   }
@@ -777,5 +800,34 @@ form {
   }
   .location{
     margin: 0;
+  }
+  .hamburger{
+    position: fixed;
+    top: 2%;
+    right: 5%;
+    height: 5.5rem;
+    width: 5.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1.2rem 0.9rem ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 25;
+  }
+  .hamburger .bar{
+    width: 100%;
+    height: 0.4rem;
+    background: white;
+    transform-origin: left bottom;
+    transition: 0.2s;
+  }
+  .bar1{
+    transform: translateX(5px) rotate(45deg);
+  }
+  .bar2{
+    opacity: 0;
+  }
+  .bar3{
+    transform: translateX(5px) rotate(-45deg);
   }
 }

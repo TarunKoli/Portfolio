@@ -27,3 +27,30 @@ function redirect(link) {
   a.href = `${link}`;
   a.click();
 }
+
+const hamburger = document.querySelector(".hamburger");
+const bar = hamburger.querySelectorAll(".bar");
+const nav = document.querySelector(".navbar");
+
+function close_nav() {
+  bar[0].classList.toggle("bar1");
+  bar[1].classList.toggle("bar2");
+  bar[2].classList.toggle("bar3");
+  nav.classList.toggle("nav_visible");
+}
+
+hamburger.addEventListener("click", () => {
+  close_nav();
+});
+
+const list = document.querySelectorAll(".navbar ul li a");
+list.forEach((li) => {
+  li.addEventListener("click", () => {
+    close_nav();
+  });
+});
+
+const logo = document.querySelector(".logo");
+logo.addEventListener("click", () => {
+  close_nav();
+});
