@@ -188,6 +188,9 @@
 }
 
 @media (max-width: 750px) {
+  html{
+    overflow: hidden;
+  }
   .p_details::before {
     display: none;
   }
@@ -253,7 +256,7 @@
 }
 
   .p_details .close {
-    right: 1%;
-    top: 1%;
+    right: 2%;
+    top: 2%;
   }
 }
