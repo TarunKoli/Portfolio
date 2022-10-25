@@ -670,6 +670,9 @@ form {
     flex-basis: 100%;
     padding-bottom: 1rem;
   }
+  main::-webkit-scrollbar{
+    width: 0.5rem;
+  }
   .landing,
   .sec_2,
   .sec_4,
