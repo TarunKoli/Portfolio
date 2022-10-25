@@ -7,7 +7,7 @@ const Texts = [
   "ReactJS",
   "C++",
   "SASS",
-  "JSON",
+  "Docker",
   "Tailwind",
   "REST",
   "ES5/ES6",
@@ -18,6 +18,7 @@ const Texts = [
   "SQL",
   "jQuery",
   "Wordpress",
+  "PWA",
 ];
 
 var tagCloud = TagCloud(".Sphere", Texts, {
