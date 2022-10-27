@@ -206,6 +206,9 @@
   width: 100%;
 }
 
+.details_wrap .desc{
+  font-size: 1.5rem;
+}
 .details_wrap .visit{
   position: relative;
   width: 11rem;

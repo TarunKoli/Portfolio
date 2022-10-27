@@ -22,9 +22,10 @@ btn.addEventListener("click", () => {
   document.querySelector(".p_details").style.opacity = 0;
 });
 
-function redirect(link) {
+function redirect(link, target = 0) {
   const a = document.createElement("a");
   a.href = `${link}`;
+  if (target) a.target = "_blank";
   a.click();
 }
 
@@ -111,9 +112,9 @@ function putDetails(data) {
   console.log(content);
 
   if (data.details.link) {
-    link.style.display = "none";
+    link.style.display = "block";
     link.addEventListener("click", () => {
-      redirect(data.details.link);
+      redirect(data.details.link, 1);
     });
   } else {
     link.style.display = "none";

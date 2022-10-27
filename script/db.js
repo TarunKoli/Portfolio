@@ -12,9 +12,9 @@ folder.set("zeeq", {
     type: "Internship",
     content: [
       "Lorem ipssum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     ],
-    link: "",
+    link: "https://tarunkoli.github.io/Enterprise-solutions/",
   },
 });
 
@@ -27,7 +27,7 @@ folder.set("edyoumatch", {
       "Lorem ipssum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     ],
-    link: "",
+    link: "https://edyoumatch.herokuapp.com/",
   },
 });
 
@@ -40,10 +40,11 @@ folder.set("whelp", {
     heading: "Whelp",
     type: "Project",
     content: [
-      "Lorem ipssum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Whelp is a chat Application made in Javascript using networking and socket programming that allows communication between server and client.",
+      "Once a user is loggedin an active connection opened between the client and the server so client can send and receive data. This allows real-time communication using TCP sockets. This is made possible by WebSockets.",
+      "The client starts by connecting to the server through a socket. Once connection is successful, client and server can emit and listen to events in realtime.",
     ],
-    link: "",
+    link: "https://tarunkoli.github.io/Whelp/sign_in.html",
   },
 });
 
@@ -57,10 +58,11 @@ folder.set("bike", {
     heading: "BikeTherapist",
     type: "Freelance",
     content: [
-      "Lorem ipssum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "BikeTherapist is a service booking progressive web app. Built to make booking services easily available without any hassle to users and customers.",
+      "Works on the idea of CRUD operations. Add new bookings updating users automatically about their bookings as per booking dates.",
+      "Integrated Razorpay as payment gateway for successfull completion of bookings.",
     ],
-    link: "",
+    link: "https://bike-therapist-frontend.herokuapp.com/",
   },
 });
 
@@ -73,7 +75,7 @@ folder.set("qr", {
       "Lorem ipssum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     ],
-    link: "",
+    link: "https://tarunkoli.github.io/QR-Code_opts/",
   },
 });
 
@@ -86,7 +88,7 @@ folder.set("gallery", {
       "Lorem ipssum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     ],
-    link: "",
+    link: "https://tarunkoli.github.io/Image-gallery/",
   },
 });
 
@@ -99,7 +101,7 @@ folder.set("parallax", {
       "Lorem ipssum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     ],
-    link: "",
+    link: "https://tarunkoli.github.io/Parallax-On-Scroll/",
   },
 });
 
