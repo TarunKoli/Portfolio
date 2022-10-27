@@ -163,7 +163,7 @@ blockquote {
 }
 @keyframes logo_rotate{
   0%{
-    transform: rotate(-90deg);
+    transform: rotate(-180deg);
     opacity: 0;
   }
   100%{
@@ -671,7 +671,7 @@ form {
     padding-bottom: 1rem;
   }
   main::-webkit-scrollbar{
-    width: 0.5rem;
+    display: none;
   }
   .landing,
   .sec_2,

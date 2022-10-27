@@ -92,6 +92,34 @@ function createCarousel(media) {
   }
 }
 
+function putDetails(data) {
+  const details_wrap = document.querySelector(".details_wrap");
+  const details_head = details_wrap.querySelector(".details_head h2");
+  const link = details_wrap.querySelector(".visit");
+  const content = details_wrap.querySelector(".desc");
+  details_head.innerHTML = `${data.details.heading}<br />${data.details.type}`;
+
+  let info = [];
+  data.details.content.forEach((ctn) => {
+    let p = document.createElement("p");
+    p.innerHTML = ctn + "<br /><br />";
+    info.push(p);
+  });
+
+  content.replaceChildren(...info);
+
+  console.log(content);
+
+  if (data.details.link) {
+    link.style.display = "none";
+    link.addEventListener("click", () => {
+      redirect(data.details.link);
+    });
+  } else {
+    link.style.display = "none";
+  }
+}
+
 function createPrompt(value) {
   var data = folder.get(value);
   let media = [];
@@ -111,6 +139,7 @@ function createPrompt(value) {
   });
 
   createCarousel(media);
+  putDetails(data);
 }
 
 projects.forEach((pj) => {
