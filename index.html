@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./styles/index.css" />
     <link rel="stylesheet" href="./styles/prompt.css" />
     <title>Tarun Koli - Be Creative</title>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     
   </head>
   <body>
@@ -344,24 +345,24 @@
             <form action="#">
               <div class="input1">
                 <div class="input_wrap">
-                  <input type="text" name="name" placeholder="Name" />
+                  <input type="text" name="name" placeholder="Name" id="name" />
                   <span></span>
                 </div>
                 <div class="input_wrap">
-                  <input type="email" name="email" placeholder="Email" />
+                  <input type="email" name="email" placeholder="Email" id="email" />
                   <span></span>
                 </div>
               </div>
               <div class="input_wrap">
-                <input type="text" name="subject" placeholder="Subject" />
+                <input type="text" name="subject" placeholder="Subject" id="subject" />
                 <span></span>
               </div>
               <div class="input_wrap">
-                <textarea name="message" placeholder="Message"></textarea>
+                <textarea name="message" placeholder="Message" id="msg"></textarea>
                 <span></span>
               </div>
             </form>
-            <button class="btn"><span></span>Send message!</button>
+            <button class="btn" onclick="sendMail()"><span></span>Send message!</button>
             <blockquote class="tab2">&lt;/form&gt;</blockquote>
             <blockquote class="tab1 no-mob">&lt;/body&gt;</blockquote>
             <blockquote class="no-mob">&lt;/html&gt;</blockquote>
@@ -375,10 +376,12 @@
             </div>
             <img src="./assets/map5.png" alt="">
           </div>
-          <blockquote class="tab1 mob-only">&lt;/body&gt;</blockquote>
+          <blockquote class="tab2 mob-only">&lt;/body&gt;</blockquote>
           <blockquote class="tab1 mob-only">&lt;/html&gt;</blockquote>
         </div>
       </section>
+
+      <div class="toast">Please fill in all required field</div>
     </main>
 
     <script
@@ -389,7 +392,6 @@
     ></script>
 
     <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./script/script1.js"></script>
     <script src="./script/db.js"></script>
     <script src="./script/script2.js"></script>
