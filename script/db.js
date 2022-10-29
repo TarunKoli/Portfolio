@@ -9,10 +9,12 @@ folder.set("zeeq", {
   ],
   details: {
     heading: "ZeeQ",
-    type: "Internship",
+    type: "SDE Internship",
     content: [
-      "Lorem ipssum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Engineered both frontend and backend for the product from scratch following microservices architecture methodology",
+      "Designed and developed 40-50% of the frontend architecture, built dynamic dashboard for products along with product landing pages.",
+      "Communicated with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis.",
+      "<b>Note: </b>For privacy purpose product's dashboard snapshots & features are hereby not included.",
     ],
     link: "https://tarunkoli.github.io/Enterprise-solutions/",
   },
@@ -22,10 +24,11 @@ folder.set("edyoumatch", {
   media: [{ file: "img0", mime: "png" }],
   details: {
     heading: "Pandora Connect",
-    type: "Internship",
+    type: "SDE Internship",
     content: [
-      "Lorem ipssum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Developed and maintained code for in-house and client application(PWA) primarily using HTML, CSS, JavaScript, and NextJS",
+      "Implemented the progressive web app using Cache then network strategy, achieved this using NextJS(next-pwa).",
+      "Designed and engineered the frontend as well as backend architecture from scratch. Developed state management using Context API, implemented swiping feature & packages from scratch.",
     ],
     link: "https://edyoumatch.herokuapp.com/",
   },
@@ -59,7 +62,7 @@ folder.set("bike", {
     type: "Freelance",
     content: [
       "BikeTherapist is a service booking progressive web app. Built to make booking services easily available without any hassle to users and customers.",
-      "Works on the idea of CRUD operations. Add new bookings updating users automatically about their bookings as per booking dates.",
+      "Works on the idea of CRUD operations. Add new bookings, updating users automatically about their bookings as per booking dates.",
       "Integrated Razorpay as payment gateway for successfull completion of bookings.",
     ],
     link: "https://bike-therapist-frontend.herokuapp.com/",
@@ -72,10 +75,23 @@ folder.set("qr", {
     heading: "QR operator",
     type: "Project",
     content: [
-      "Lorem ipssum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Built a QR scanner and generator web application for encrypting & decrypting information in the form of a QR. Integrated the goqr API for generating and scanning the QR codes.",
+      "It was developed using HTML, CSS, Javascript and goqr API. The web application is fully supported and responsive on all browsers and mobile devices.",
     ],
     link: "https://tarunkoli.github.io/QR-Code_opts/",
+  },
+});
+
+folder.set("period", {
+  media: [{ file: "img0", mime: "png" }],
+  details: {
+    heading: "The Period Society",
+    type: "Frontend Devloper",
+    content: [
+      "Worked with a team of three designers to build a website and awareness platform for Period Society, an ambitious NGO originating.",
+      "Manually tested sites in various browsers and mobile devices to ensure cross-browser compatibility and responsiveness",
+    ],
+    link: "",
   },
 });
 
@@ -85,8 +101,9 @@ folder.set("gallery", {
     heading: "Image Gallery",
     type: "Project",
     content: [
-      "Lorem ipssum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "This projects aims at implementing three different gallery styles namely Instagram Grids, Columnic Grids and Boxy Grids using CSS Grids.",
+      "This project is done for learning purpose and is a great resource for learning css grids at an intermediate level.",
+      "Implemented CSS grids in a fully responsive way to support it on nearly every digital device.",
     ],
     link: "https://tarunkoli.github.io/Image-gallery/",
   },
@@ -98,8 +115,8 @@ folder.set("parallax", {
     heading: "Parallax Effect",
     type: "Project",
     content: [
-      "Lorem ipssum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Implemented scroll based parallax animation from scratch, without any third party package to achieve this effect.",
+      "The project aims at giving a complete understanding of how scroll events work and how different DOM elements are animated independently based on scroll position in javascript",
     ],
     link: "https://tarunkoli.github.io/Parallax-On-Scroll/",
   },

@@ -109,13 +109,9 @@ function putDetails(data) {
 
   content.replaceChildren(...info);
 
-  console.log(content);
-
   if (data.details.link) {
     link.style.display = "block";
-    link.addEventListener("click", () => {
-      redirect(data.details.link, 1);
-    });
+    link.querySelector("a").href = data.details.link;
   } else {
     link.style.display = "none";
   }
