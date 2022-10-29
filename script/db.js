@@ -128,8 +128,9 @@ folder.set("tripify", {
     heading: "Tripify",
     type: "Project",
     content: [
-      "Lorem ipssum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Tripify is a tour booking web app built using NodeJS, Express, HTML, CSS, Javascript, ReactJS & Mongodb. Tripify Works on the concept of a travel management system.",
+      "Designed in Figma and developed in a fully responsive way to ensure a proper UI for every device. Integrated stripe as a payment gateway for successful completion of bookings.",
+      "Apart from it also consist of an admin module where all the master entries, ticket pricing, trip details, schedules, etc can be entered.",
     ],
     link: "",
   },
