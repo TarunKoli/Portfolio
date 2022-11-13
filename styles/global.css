@@ -9,13 +9,16 @@
   font-family: 'Roboto', sans-serif;
 }
 :root {
-  --nav-bg: #2B3038;
-  --main-theme: #20242a;
-  --combo: #FF662B;
-  --combo-light: rgba(255, 102, 43,0.75);
+  --nav-bg: #1f2429;
+  /* --nav-bg: #20242a; */
+  /* --nav-bg: #1e2328;   */
+  --main-theme: #16191d;
+  --secondary-bg: #1f2429;
+  --combo: #1dffff;
+  --combo-light: #1dffff;
   --text-white: #ffffff;
   --text-grey:#6C7A8A;
-  --text-dark:rgba(43, 48, 56,0.4);
+  --text-dark:rgba(43, 48, 56,0.3);
   --roboto:'Roboto', sans-serif;
   --courgette:'Courgette', cursive;
   --source-pro:'Source Code Pro', monospace;

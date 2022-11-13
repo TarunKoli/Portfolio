@@ -38,5 +38,5 @@ var tagCloud = TagCloud(".Sphere", Texts, {
 });
 
 // Giving color to each text in sphere
-var color = "#FF662B";
+var color = "#1dffff";
 document.querySelector(".Sphere").style.color = color;
