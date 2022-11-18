@@ -368,10 +368,10 @@ blockquote {
   display: flex;
 }
 .sec4_box1 {
-  flex-basis: 40%;
+  flex-basis: 50%;
 }
 .sec4_box2 {
-  flex-basis: 60%;
+  flex-basis: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -384,7 +384,7 @@ blockquote {
   font-size: 1.8rem;
 }
 .sec4_box1 div:last-child p {
-  max-width: 85%;
+  max-width: 75%;
   line-height: 2.3rem;
 }
 .sec_4 .scroll_down {
@@ -640,6 +640,7 @@ form {
 .error{
   border-bottom: 2px solid red !important;
 }
+
 .toast{
   position: fixed;
   bottom: 3%;
@@ -679,10 +680,91 @@ form {
   }
 }
 
-@media(max-width:750px) {
-  nav,.no-mob{  
-    display: none ;
+
+@media (max-width:1300px) {
+  nav{  
+    display: none;
+  }  
+  main{
+    flex-basis: 100%;
+    padding-bottom: 1rem;
   }
+  .intro h1 {
+    font-size: 7rem;
+  }
+  .sec2_wrapper div:first-child h1,
+  .sec4_box1 div:first-child h1,
+  .box1 div:first-child h1,
+  .form div:first-child h1 {
+    font-size: 6rem;
+  }
+  .sec4_box1,.sec4_box2 {
+    flex-basis: 50%;
+  }
+  .sec4_box1 div:last-child p {
+    max-width: 90%;
+  }
+  .hamburger{
+    position: fixed;
+    top: 2%;
+    right: 5%;
+    height: 5.5rem;
+    width: 5.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1.2rem 0.9rem ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 25;
+  }
+  .hamburger .bar{
+    width: 100%;
+    height: 0.4rem;
+    background: white;
+    transform-origin: left bottom;
+    transition: 0.2s;
+  }
+  .bar1{
+    transform: translateX(5px) rotate(45deg);
+  }
+  .bar2{
+    opacity: 0;
+  }
+  .bar3{
+    transform: translateX(5px) rotate(-45deg);
+  }
+  .nav_visible{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 10%;
+    z-index: 20;
+  }
+  .exps{
+    align-items: flex-start;
+  }
+  .exp {
+    height: auto;
+    width: 41%;
+    margin: 0 1rem;
+    padding: 2.5rem;
+  }
+}
+
+@media (max-height:750px) {
+  .sec_6{
+    height: auto;
+  }
+  .intro h1 {
+    letter-spacing: -3px;
+  }
+}
+
+@media(max-width:780px) {
+  .no-mob{  
+    display: none;
+  }  
   nav .logo{
     height: 30%;
   }
@@ -706,19 +788,13 @@ form {
     font-weight: 500;
   }
   .nav_visible{
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 20;
+    width: 20%;
   }
   .mob-only{
     display: block;
   }
-  main{
-    flex-basis: 100%;
-    padding-bottom: 1rem;
+  .hamburger.mob-only{
+    display: flex;
   }
   main::-webkit-scrollbar{
     display: none;
@@ -758,7 +834,7 @@ form {
   .sec5_head {
     top: 10%;
     right: -3%;
-    font-size: 12rem;
+    font-size: 15rem;
     letter-spacing: -0.5rem;
   }
   .sec2_head{
@@ -865,40 +941,23 @@ form {
   .location{
     margin: 0;
   }
-  .hamburger{
-    position: fixed;
-    top: 2%;
-    right: 5%;
-    height: 5.5rem;
-    width: 5.5rem;
-    background: rgba(0, 0, 0, 0.3);
-    padding: 1.2rem 0.9rem ;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: 25;
-  }
-  .hamburger .bar{
-    width: 100%;
-    height: 0.4rem;
-    background: white;
-    transform-origin: left bottom;
-    transition: 0.2s;
-  }
-  .bar1{
-    transform: translateX(5px) rotate(45deg);
-  }
-  .bar2{
-    opacity: 0;
-  }
-  .bar3{
-    transform: translateX(5px) rotate(-45deg);
-  }
+ 
   .toast{
     width: 50%;
     right: -65%;
   }
   .toast_active{
     right: 5%;
+  }
+}
+@media (max-width:500px) {
+  .landing .sec_head,
+  .sec2_head,
+  .sec4_head,
+  .sec5_head {
+    font-size: 12rem;
+  }
+  .nav_visible{
+    width: 100%;
   }
 }

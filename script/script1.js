@@ -21,20 +21,29 @@ const Texts = [
   "PWA",
 ];
 
-var tagCloud = TagCloud(".Sphere", Texts, {
-  // Sphere radius in px
-  radius: screen.width > 750 ? 350 : 180,
+function loadSphere() {
+  document.querySelector(".Sphere").innerHTML = "";
 
-  // animation speed
-  // slow, normal, fast
-  maxSpeed: "normal",
-  initSpeed: "fast",
+  var tagCloud = TagCloud(".Sphere", Texts, {
+    radius:
+      screen.width > 1150
+        ? 350
+        : screen.width > 1050
+        ? 300
+        : screen.width > 480
+        ? 250
+        : 180,
+    maxSpeed: "normal",
+    initSpeed: "fast",
+    direction: 135,
+    keep: true,
+  });
+}
 
-  // Rolling direction [0 (top) , 90 (left), 135 (right-bottom)]
-  direction: 135,
+loadSphere();
 
-  // interaction with mouse or not [Default true (decelerate to rolling init speed, and keep rolling with mouse).]
-  keep: true,
+window.addEventListener("resize", () => {
+  loadSphere();
 });
 
 // Giving color to each text in sphere

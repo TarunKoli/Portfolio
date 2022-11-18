@@ -34,12 +34,21 @@ a{
   text-decoration: none;
 }
 
-@media (max-width: 770px) {
-  #structure {
-    display: block;
+@media (max-height: 700px) {
+  html{
+    font-size: 50%;
   }
-  #cover {
-    width: 100%;
+}
+
+@media (max-height: 600px) {
+  html{
+    font-size: 45%;
+  }
+}
+
+@media (max-height: 500px) {
+  html{
+    font-size: 40%;
   }
 }
 

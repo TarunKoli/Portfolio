@@ -268,10 +268,13 @@
   color: var(--main-theme);
 }
 
-@media (max-width: 750px) {
+@media (max-width:1300px) {
   html{
     overflow: hidden;
-  }
+  }  
+}
+
+@media (max-width: 780px) {
   .p_details::before {
     display: none;
   }
