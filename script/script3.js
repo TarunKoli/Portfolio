@@ -3,19 +3,24 @@ const prompt_wrap = document.querySelector(".prompt_wrap");
 const projects = document.querySelectorAll(".project");
 const btn = document.querySelector(".close");
 
+window.addEventListener("load", () => {
+  let params = new URLSearchParams(window.location.search);
+  console.log(params.get("prompt"));
+  if (params.get("prompt")) {
+    createPrompt(params.get("prompt"));
+  }
+});
+
 projects.forEach((pj) => {
   pj.addEventListener("click", () => {
-    prompty.style.animation = "promfy 1s ease-in-out forwards";
-    prompt_wrap.style.animation = "wrapfy 1s ease-in-out forwards";
-
-    setTimeout(() => {
-      document.querySelector(".p_snap").style.opacity = 1;
-      document.querySelector(".p_details").style.opacity = 1;
-    }, 1000);
+    createPrompt(pj.getAttribute("data-val"));
   });
 });
 
 btn.addEventListener("click", () => {
+  const url = new URL(window.location);
+  window.history.pushState({}, "", url.origin);
+
   prompty.style.animation = "promfy2 1s ease-in-out forwards";
   prompt_wrap.style.animation = "wrapfy2 1s ease-in-out forwards";
   document.querySelector(".p_snap").style.opacity = 0;
@@ -117,9 +122,24 @@ function putDetails(data) {
   }
 }
 
+function promptAnimation() {
+  prompty.style.animation = "promfy 1s ease-in-out forwards";
+  prompt_wrap.style.animation = "wrapfy 1s ease-in-out forwards";
+  setTimeout(() => {
+    document.querySelector(".p_snap").style.opacity = 1;
+    document.querySelector(".p_details").style.opacity = 1;
+  }, 1000);
+}
+
 function createPrompt(value) {
   var data = folder.get(value);
   let media = [];
+
+  if (!data) return;
+
+  const url = new URL(window.location);
+  url.searchParams.set("prompt", value);
+  window.history.pushState({}, "", url);
 
   data.media.forEach((pj) => {
     if (pj.mime === "png" || pj.mime === "jpg" || pj.mime === "jpeg") {
@@ -135,15 +155,10 @@ function createPrompt(value) {
     }
   });
 
+  promptAnimation();
   createCarousel(media);
   putDetails(data);
 }
-
-projects.forEach((pj) => {
-  pj.addEventListener("click", () => {
-    createPrompt(pj.getAttribute("data-val"));
-  });
-});
 
 function remove_error(selector) {
   setTimeout(() => {
