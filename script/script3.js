@@ -5,10 +5,7 @@ const btn = document.querySelector(".close");
 
 window.addEventListener("load", () => {
   let params = new URLSearchParams(window.location.search);
-  console.log(params.get("prompt"));
-  if (params.get("prompt")) {
-    createPrompt(params.get("prompt"));
-  }
+  if (params.get("prompt")) createPrompt(params.get("prompt"));
 });
 
 projects.forEach((pj) => {
@@ -19,7 +16,7 @@ projects.forEach((pj) => {
 
 btn.addEventListener("click", () => {
   const url = new URL(window.location);
-  window.history.pushState({}, "", url.origin);
+  window.history.pushState({}, "", url.href.split("?")[0]);
 
   prompty.style.animation = "promfy2 1s ease-in-out forwards";
   prompt_wrap.style.animation = "wrapfy2 1s ease-in-out forwards";
