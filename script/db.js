@@ -30,7 +30,7 @@ folder.set("edyoumatch", {
       "Implemented the progressive web app using Cache then network strategy, achieved this using NextJS(next-pwa).",
       "Designed and engineered the frontend as well as backend architecture from scratch. Developed state management using Context API, implemented swiping feature & packages from scratch.",
     ],
-    link: "https://edyoumatch.herokuapp.com/",
+    link: "https://edyoumatch-frontend.vercel.app/",
   },
 });
 
@@ -123,7 +123,11 @@ folder.set("parallax", {
 });
 
 folder.set("tripify", {
-  media: [{ file: "img0", mime: "png" }],
+  media: [
+    { file: "img0", mime: "png" },
+    { file: "img1", mime: "png" },
+    { file: "img2", mime: "png" }
+  ],
   details: {
     heading: "Tripify",
     type: "Project",
@@ -132,6 +136,24 @@ folder.set("tripify", {
       "Designed in Figma and developed in a fully responsive way to ensure a proper UI for every device. Integrated stripe as a payment gateway for successful completion of bookings.",
       "Apart from it also consist of an admin module where all the master entries, ticket pricing, trip details, schedules, etc can be entered.",
     ],
-    link: "",
+    link: "https://tarunkoli.github.io/Tripify/",
+  },
+});
+
+folder.set("trademo", {
+  media: [
+    { file: "img0", mime: "png" },
+    { file: "img1", mime: "png" },
+    { file: "img2", mime: "png" },
+    { file: "img3", mime: "png" },
+  ],
+  details: {
+    heading: "trademo",
+    type: "FTE Internship",
+    content: [
+      "Implemented scroll based parallax animation from scratch, without any third party package to achieve this effect.",
+      "The project aims at giving a complete understanding of how scroll events work and how different DOM elements are animated independently based on scroll position in javascript",
+    ],
+    link: "https://trademo.com/",
   },
 });
