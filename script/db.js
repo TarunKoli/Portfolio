@@ -148,11 +148,12 @@ folder.set("trademo", {
     { file: "img3", mime: "png" },
   ],
   details: {
-    heading: "trademo",
-    type: "FTE Internship",
+    heading: "Trademo",
+    type: "SDE Internship",
     content: [
-      "Implemented scroll based parallax animation from scratch, without any third party package to achieve this effect.",
-      "The project aims at giving a complete understanding of how scroll events work and how different DOM elements are animated independently based on scroll position in javascript",
+      "Worked on building the features & maintaing quality of the marketing website for trademo.",
+      "Optimised, organized & revamped 50-60% of frontend architecture of thier server side rendered website.",
+      "Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis.",
     ],
     link: "https://trademo.com/",
   },
