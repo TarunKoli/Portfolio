@@ -3,15 +3,19 @@ body{
     color: var(--primary-text);
 }
 
-.cursor{
-    position: fixed;
+.mouse{
+    background: var(--tertiary-text);
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: var(--tertiary-text);
-    transform: translate(-50%, -50%);
-    transition: 0.2s;
     pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    z-index: 5;
+    transition: 0.3s width, 0.3s height;
 }
 
 .nav-left,
