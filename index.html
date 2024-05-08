@@ -1,403 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./assets/favicon.png">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="./styles/global.css" />
-    <link rel="stylesheet" href="./styles/index.css" />
-    <link rel="stylesheet" href="./styles/prompt.css" />
-    <title>Tarun Koli - Be Creative</title>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Tarun Koli | Portfolio</title>
+</head>
+<body>
+
+    <div class="cursor"></div>
     
-  </head>
-  <body>
-
-    <div class="hamburger mob-only">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-
-    <div class="prompt">
-      <div class="prompt_wrap">
-        <div class="prompt_box1">
-          <div class="p_snap">
-            <button class="prev"><i class="fa fa-solid fa-chevron-left"></i></button>
-            <button class="next"><i class="fa fa-solid fa-chevron-right"></i></button>
-            <div class="slider">
-              <!-- <img src="" alt="project_img" class="slide">
-              <video src="" autoplay loop class="slide-video"></video> -->
-            </div>
-          </div>
+    <nav class="nav-left d-flex flex-column justify-content-between">
+        <div class="logo">
+            <img src="./assets/Icons/logo.svg" alt="logo">
         </div>
-        <div class="prompt_box2">
-          <div class="p_details">
-            <button class="close"><img src="./assets/times.svg" alt="cross-btn"></button>
-            <div class="details_wrap">
-              <div class="details_head">
-                <h2>Demo Heading <br /> Internship  </h2>
-              </div>
-              <div class="desc">
-              
-              </div>
-              <div class="visit">
-                <span></span><a href="#" target="_blank">Visit Website</a>
-              </div>
-            </div>
-          </div>
+        <div class="links d-flex flex-column">
+            <img src="./assets/Icons/basketball.svg" alt="logo">
+            <img src="./assets/Icons/instagram.svg" alt="logo">
+            <img src="./assets/Icons/play.svg" alt="logo">
+            <img src="./assets/Icons/linkedin.svg" alt="logo">
         </div>
-      </div>
-    </div>
-
-    <nav class="navbar">
-      <div class="logo">
-        <img src="./assets/logo.svg" alt="logo" onclick="redirect('#landing')" >
-        <h3 onclick="redirect('#landing')">Tech Sailor</h3>
-      </div>
-      <ul>
-        <li>
-          <a href="#sec2"><span>.work()</span></a>
-        </li>
-        <li>
-          <a href="#sec4"><span>.about()</span></a>
-        </li>
-        <li>
-          <a href="#sec5"><span>.skills()</span></a>
-        </li>
-        <li>
-          <a href="#sec6"><span>.contact()</span></a>
-        </li>
-        <li>
-          <a
-            href="https://drive.google.com/file/d/1ZOks0U7zFkL6DeT6HhmEIwMY-i-3ZDeI/view?usp=share_link"
-            target="_blank"
-          >
-            <span>.resume()</span></a
-          >
-        </li>
-        <li>
-          <a href="https://github.com/TarunKoli" target="_blank"
-            ><i class="fa fa-brands fa-github"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/tarun-kumar-8093441b5/"
-            target="_blank"
-          >
-            <i class="fa fa-brands fa-linkedin"></i>
-          </a>
-        </li>
-      </ul>
     </nav>
 
-    <main>
-      <section class="landing" id="landing">
-        <h1 class="sec_head">Portfolio</h1>
-        <blockquote>&lt;html&gt;</blockquote>
-        <blockquote class="tab1">&lt;body&gt;</blockquote>
-        <div class="landing_wrapper">
-        <div class="intro">
-          <blockquote class="tab1">&lt;h1&gt;</blockquote>
-          <h1 class="el1 tab2">Hi,</h1>
-          <div class="intro_wrapper">
-            <h1 class="el1 tab2">I'm</h1>
-            <div class="intro_logo">
-            <img src="./assets/logo.svg" alt="logo">
-            </div>
-            <h1 class="el1 tab2">arun Koli,</h1>
-          </div>
-          <h1 class="el1 tab2">Software Developer</h1>
-          <blockquote class="tab1">&lt;/h1&gt;</blockquote>
+    <nav class="nav-right d-flex flex-column justify-content-between align-items-end">
+        <div class="links d-flex flex-column">
+            <a data-val="About" href="#"><span>About</span></a>
+            <a data-val="Work" href="#"><span>Work</span></a>
+            <a data-val="Contact" href="#"><span>Contact</span></a>
         </div>
-        <blockquote class="tab1">&lt;p&gt;</blockquote>
-        <h4>Web Developer / Full Stack Developer</h4>
-        <blockquote class="tab1">&lt;/p&gt;</blockquote>
-        <button class="btn" onclick="redirect('#sec6')"><span></span>Contact me!</button>
+        <div class="sound">
+            <p class="m-0 p-0">sound&nbsp;<span>Off</span></p>
         </div>
-        <div class="scroll_down">
-          <div>
-            <p>scroll down</p>
-            <i class="fa fa-solid fa-angle-down"></i>
-          </div>
-          <div>
-            <p>scroll down</p>
-            <i class="fa fa-solid fa-angle-down"></i>
-          </div>
-        </div>
-      </section>
+    </nav>
 
-      <section class="sec_2" id="sec2">
-        <h1 class="sec2_head">Work</h1>
-        <div class="sec2_wrapper">
-          <div>
-            <blockquote class="tab1">&lt;h2&gt;</blockquote>
-            <h1 class="el1 tab3">My Portfolio</h1>
-            <blockquote class="tab1">&lt;/h2&gt;</blockquote>
-          </div>
-          <div>
-            <div>
-              <blockquote class="tab1">&lt;p&gt;</blockquote>
-              <p class="tab3">
-                A small gallery of recent projects chosen by me. I've done them
-                all together with amazing people from companies around India.
-                These projects include things I've made or learned at the companies
-                I have worked for. Interested to see some more? Visit my github.
-              </p>
-              <blockquote class="tab1">&lt;/p&gt;</blockquote>
-            </div>
-            <button class="btn" onclick="redirect(`https://github.com/TarunKoli`)"><span></span>See More!</button>
-          </div>
-        </div>
-      </section>
 
-      <section class="sec_3" id="sec3">
-        <blockquote class="tab2">&lt;section&gt;</blockquote>
-        <div class="project_grid">
-          <div class="project" data-val="zeeq">
-            <aside>view<br />project</aside>
-            <img src="./assets/work3.png" alt="work3" />
-          </div>
-          <div class="project" data-val="whelp">
-            <aside>view<br />project</aside>
-            <img src="./assets/work4.png" alt="work4" />
-          </div>
-          <div class="project" data-val="trademo">
-            <aside>view<br />project</aside>
-            <img src="./assets/work10.png" alt="work10" />
-          </div>
-          
-          <div class="project" data-val="bike">
-            <aside>view<br />project</aside>
-            <img src="./assets/work2.png" alt="work2" />
-          </div>
-          <div class="project" data-val="edyoumatch">
-            <aside>view<br />project</aside>
-            <img src="./assets/work1.png" alt="work1" />
-          </div>
-         
-          <div class="project" data-val="gallery">
-            <aside>view<br />project</aside>
-            <img src="./assets/work6.png" alt="work6" />
-          </div>
-          <div class="project" data-val="parallax">
-            <aside>view<br />project</aside>
-            <img src="./assets/work7.png" alt="work7" />
-          </div>
-          <div class="project" data-val="qr">
-            <aside>view<br />project</aside>
-            <img src="./assets/work8.png" alt="work8" />
-          </div>
-          <div class="project" data-val="tripify">
-            <aside>view<br />project</aside>
-            <img src="./assets/work9.png" alt="work9" />
-          </div>
-          <div class="project" data-val="period">
-            <aside>view<br />project</aside>
-            <img src="./assets/work5.png" alt="work5" />
-          </div>
+    <main class="portfolio d-flex align-items-center justify-content-center">
+        <div class="landing-text text-center">
+            <h4>Tarun Koli</h4>
+            <h1>MAKING <span>GOOD SHIT</span> SINCE 2019</h1>
         </div>
-        <blockquote class="tab2">&lt;/section&gt;</blockquote>
-      </section>
-
-      <section class="sec_4" id="sec4">
-        <h1 class="sec4_head">About</h1>
-        <div class="sec4_wrapper">
-          <div class="sec4_box1">
-            <div>
-              <blockquote class="tab1">&lt;h2&gt;</blockquote>
-              <h1 class="el1 tab3">Me, Myself and I</h1>
-              <blockquote class="tab1">&lt;/h2&gt;</blockquote>
-            </div>
-            <div>
-              <blockquote class="tab1">&lt;p&gt;</blockquote>
-              <p class="tab3">
-                Hello, I'm Tarun Koli, full stack web developer based in New Delhi, India.
-                I am an Information Technology(IT) student, currently pursuing my Bachelor's at
-                USICT Dwarka, New Delhi.<br /><br />
-                I am fasinated by technology and really enjoy development. Web Development being my area of expertise,
-                I have worked on many personal, open source and freelance projects.
-                Apart from being a Web Developer I have been involed in other domains like UI/UX and UI animations.
-                <br /><br />
-                I currently prefer working remotely or in New Delhi, India and expects a non linear growth curve.
-              </p>
-              <blockquote class="tab1">&lt;/p&gt;</blockquote>
-            </div>
-          </div>
-          <div class="sec4_box2">
-            <span class="Sphere"></span>
-          </div>
-        </div>
-        <div class="scroll_down">
-          <div>
-            <p>scroll down</p>
-            <i class="fa fa-solid fa-angle-down"></i>
-          </div>
-          <div>
-            <p>scroll down</p>
-            <i class="fa fa-solid fa-angle-down"></i>
-          </div>
-        </div>
-      </section>
-
-      <section class="sec_5" id="sec5">
-        <h1 class="sec5_head">Skills</h1>
-        <div class="sec5_wrapper">
-          <div class="box1">
-            <div>
-              <blockquote class="tab1">&lt;h2&gt;</blockquote>
-              <h1 class="el1 tab3">Skills &</h1>
-              <h1 class="el1 tab3">Experience</h1>
-              <blockquote class="tab1">&lt;/h2&gt;</blockquote>
-            </div>
-            <div>
-              <blockquote class="tab1">&lt;p&gt;</blockquote>
-              <p class="tab3">
-                I've 1+ years of internship experience.
-                I've worked remotely for startups, and an NGO and collaborated with talented people.<br /><br />
-                I Write modern, performant, maintainable code for a diverse array of internal projects.<br />
-                Work with a variety of different languages, platforms, frameworks, and content management systems
-                such as JavaScript, TypeScript, Next, React, Asana, WordPress and Docker
-                <br /><br />
-                I'm open to Job opportunities where I can contribute, learn and grow.   
-                If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.
-              </p>
-              <blockquote class="tab1">&lt;/p&gt;</blockquote>
-            </div>
-          </div>
-          <div class="box2">
-            <div class="progresses">
-              <div class="meter">
-                <label>Front-end</label>
-                <div class="bar_wrapper">
-                  <div class="counter" data-val="90"></div>
-                  <div class="progress_bar"></div>
-                </div>
-              </div>
-              <div class="meter">
-                <label>Back-end</label>
-                <div class="bar_wrapper">
-                  <div class="counter" data-val="80"></div>
-                  <div class="progress_bar"></div>
-                </div>
-              </div>
-              <div class="meter">
-                <label>ReactJS</label>
-                <div class="bar_wrapper">
-                  <div class="counter" data-val="85"></div>
-                  <div class="progress_bar"></div>
-                </div>
-              </div>
-              <div class="meter">
-                <label>Problem Solving</label>
-                <div class="bar_wrapper">
-                  <div class="counter" data-val="80"></div>
-                  <div class="progress_bar"></div>
-                </div>
-              </div>
-            </div>
-            <div class="exps">
-              <div class="exp">
-                <h4>Full Stack Developer</h4>
-                <h5>ZeeQ</h5>
-                <span>2021-2022</span>
-                <p>
-                  Architected and implemented the front end of the ZeeQ products dashboard,
-                  in a way that different roles can access products efficiently.
-                </p>
-              </div>
-              <div class="exp">
-                <h4>Full Stack Developer</h4>
-                <h5>Pandora Connect</h5>
-                <span>2021</span>
-                <p>
-                  Worked with a team of three designers to build an educational platform (PWA) for pandora connect,
-                  an ambitious startup.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="sec_6" id="sec6">
-        <h1 class="sec6_head">@</h1>
-        <div class="sec6_wrapper">
-          <div class="form">
-            <div>
-              <blockquote class="tab1">&lt;h2&gt;</blockquote>
-              <h1 class="el1 tab3">Contact me</h1>
-              <blockquote class="tab1">&lt;/h2&gt;</blockquote>
-            </div>
-            <div>
-              <blockquote class="tab1">&lt;p&gt;</blockquote>
-              <p class="tab3">
-                I’m interested in full-time opportunities – especially ambitious
-                or large projects. However, if you have other request or
-                question, don’t hesitate to use the form.
-              </p>
-              <blockquote class="tab1">&lt;/p&gt;</blockquote>
-            </div>
-
-            <blockquote class="tab2">&lt;form&gt;</blockquote>
-            <form action="#">
-              <div class="input1">
-                <div class="input_wrap">
-                  <input type="text" name="name" placeholder="Name" id="name" />
-                  <span></span>
-                </div>
-                <div class="input_wrap">
-                  <input type="email" name="email" placeholder="Email" id="email" />
-                  <span></span>
-                </div>
-              </div>
-              <div class="input_wrap">
-                <input type="text" name="subject" placeholder="Subject" id="subject" />
-                <span></span>
-              </div>
-              <div class="input_wrap">
-                <textarea name="message" placeholder="Message" id="msg"></textarea>
-                <span></span>
-              </div>
-            </form>
-            <button class="btn" onclick="sendMail()"><span></span>Send message!</button>
-            <blockquote class="tab2">&lt;/form&gt;</blockquote>
-            <blockquote class="tab1 no-mob">&lt;/body&gt;</blockquote>
-            <blockquote class="no-mob">&lt;/html&gt;</blockquote>
-          </div>
-          <div class="map">
-            <div class="location">
-              <p>
-                Tarun Koli,<br />India, New Delhi,<br />Devli - 110080
-              </p>
-              <p class="map_email"><span>@</span>: tarunkoli0206@gmail.com</p>
-            </div>
-            <img src="./assets/map6.png" alt="">
-          </div>
-          <blockquote class="tab2 mob-only">&lt;/body&gt;</blockquote>
-          <blockquote class="tab1 mob-only">&lt;/html&gt;</blockquote>
-        </div>
-      </section>
-
-      <div class="toast">Please fill in all required field</div>
     </main>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
-      integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
-    <script src="./script/script1.js"></script>
-    <script src="./script/db.js"></script>
-    <script src="./script/script2.js"></script>
-    <script src="./script/script3.js"></script>
-
-  </body>
+    <script src="./scripts/script.js"></script>
+</body>
 </html>
