@@ -12,6 +12,7 @@
     --secondary: #CCE3FF;
     --tertiary: #00FF77;
     --secondary-light: rgba(204, 227, 255, 0.5);
+    --secondary-lightest: rgba(204, 227, 255, 0.2);
 
     --primary-font: "Poppins", sans-serif;
     --secondary-font: "Inter", sans-serif;

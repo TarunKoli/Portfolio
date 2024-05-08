@@ -39,7 +39,8 @@ document.addEventListener("mousemove", function(event){
 
 let no_cursor_elements = [
     ".nav-right .links",
-    ".nav-right .sound"
+    ".nav-right .sound",
+    ".skills"
 ]
 
 function AddListeners(){

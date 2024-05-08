@@ -89,6 +89,7 @@ body{
     color: var(--primary-text);
 }
 
+
 main{
     width: 100%;
     height: 100vh;
@@ -121,4 +122,93 @@ main .landing-text h1{
 }
 main .landing-text h1>span{
     color: var(--tertiary-text);
+}
+
+
+.about-me{
+    /* border: 2px solid red; */
+    padding-top: 28vh;
+    margin-bottom: 28vh;
+    margin-left: 16%;
+}
+.about-me h4{
+    font-size: 1.4rem;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-weight: 400;
+    color: var(--primary-text);
+}
+.about-me h2{
+    font-size: 6.25rem;
+    font-weight: 600;
+    font-family: var(--primary-font);
+    letter-spacing: -2px;
+    line-height: 7.2rem;
+    word-spacing: 0.5rem;
+    color: var(--primary-text);
+}
+.about-me h2>strong{
+    font-weight: 600;
+    color: var(--tertiary-text);
+}
+
+
+
+.my-skills{
+    margin-bottom: 28vh;
+}
+.my-skills h4{
+    font-size: 1.4rem;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-weight: 400;
+    color: var(--primary-text);
+    margin-left: 16%;
+}
+
+.my-skills .skills li{
+    list-style: none;
+    font-size: 12.8rem;
+    color: var(--primary-text);
+    font-family: var(--primary-font);
+    border-top: 1px solid var(--secondary-lightest);
+    cursor: default;
+    position: relative;
+}
+.my-skills .skills li:last-child{
+    border-bottom: 1px solid var(--secondary-lightest);
+}
+
+.my-skills .skills li::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateX(90deg);
+    width: 100%;
+    height: 100%;
+    color: var(--primary);
+    background: var(--tertiary);
+    overflow: hidden;
+    transition: 0.5s;
+    mix-blend-mode: difference;
+}
+.my-skills .skills li,
+.my-skills .skills li::before{
+    padding-left: 16%;
+    font-weight: 600;
+    letter-spacing: -7px;
+    line-height: 10rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.my-skills .skills li:hover{
+    color: var(--tertiary-text);
+}
+.my-skills .skills li:hover::before{
+    transform: rotateX(0deg);
 }
