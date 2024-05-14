@@ -97,8 +97,8 @@ main{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     color: var(--primary-text);
-    pointer-events: none;
 }
 
 main .landing-text{
@@ -125,13 +125,15 @@ main .landing-text h1>span{
 }
 
 
-.about-me{
-    /* border: 2px solid red; */
+.about-me,
+.client_info{
     padding-top: 28vh;
     margin-bottom: 28vh;
-    margin-left: 16%;
+    margin-left: 16% !important;
 }
-.about-me h4{
+.about-me h4,
+.experience h4,
+.client_info h4{
     font-size: 1.4rem;
     font-family: var(--primary-font);
     text-transform: uppercase;
@@ -139,7 +141,9 @@ main .landing-text h1>span{
     font-weight: 400;
     color: var(--primary-text);
 }
-.about-me h2{
+.about-me h2,
+.experience h2,
+.client_info h2{
     font-size: 6.25rem;
     font-weight: 600;
     font-family: var(--primary-font);
@@ -148,7 +152,9 @@ main .landing-text h1>span{
     word-spacing: 0.5rem;
     color: var(--primary-text);
 }
-.about-me h2>strong{
+.about-me h2>strong,
+.experience h2>strong,
+.client_info h2>strong{
     font-weight: 600;
     color: var(--tertiary-text);
 }
@@ -158,7 +164,9 @@ main .landing-text h1>span{
 .my-skills{
     margin-bottom: 28vh;
 }
-.my-skills h4{
+.my-skills h4,
+.history h4,
+.companies h4{
     font-size: 1.4rem;
     font-family: var(--primary-font);
     text-transform: uppercase;
@@ -168,20 +176,26 @@ main .landing-text h1>span{
     margin-left: 16%;
 }
 
-.my-skills .skills li{
+.my-skills .skills li,
+.history .skills li,
+.companies .skills li{
     list-style: none;
     font-size: 12.8rem;
     color: var(--primary-text);
     font-family: var(--primary-font);
-    border-top: 1px solid var(--secondary-lightest);
+    border-top: 1px solid var(--primary-border);
     cursor: default;
     position: relative;
 }
-.my-skills .skills li:last-child{
-    border-bottom: 1px solid var(--secondary-lightest);
+.my-skills .skills li:last-child,
+.history .skills li:last-child,
+.companies .skills li:last-child{
+    border-bottom: 1px solid var(--primary-border);
 }
 
-.my-skills .skills li::before{
+.my-skills .skills li::before,
+.history .skills li::before,
+.companies .skills li::before{
     content: "";
     position: absolute;
     top: 0;
@@ -196,19 +210,143 @@ main .landing-text h1>span{
     mix-blend-mode: difference;
 }
 .my-skills .skills li,
-.my-skills .skills li::before{
+.companies .skills li,
+.my-skills .skills li::before,
+.companies .skills li::before{
     padding-left: 16%;
+    padding-right: 10%;
     font-weight: 600;
     letter-spacing: -7px;
     line-height: 10rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    text-transform: uppercase;
 }
 
-.my-skills .skills li:hover{
+.my-skills .skills li>p,
+.history .skills li>p,
+.companies .skills li>p{
+    text-transform: uppercase;
+}
+.my-skills .skills li>span,
+.companies .skills li>span{
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: normal;
+    max-width: 35%;
+    color: var(--primary);
+    z-index: 6;
+    pointer-events: none;
+}
+
+.my-skills .skills li:hover,
+.history .skills li:hover,
+.companies .skills li:hover{
     color: var(--tertiary-text);
 }
-.my-skills .skills li:hover::before{
+.my-skills .skills li:hover::before,
+.history .skills li:hover::before,
+.companies .skills li:hover::before{
     transform: rotateX(0deg);
+}
+
+.experience{
+    height: 100vh;
+    background: url(../assets/exp.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 36vh;
+    padding-top: 25vh;
+    padding-left: 16%;
+    /* position: relative; */
+    z-index: 0;
+}
+.experience .expand-cursor{
+    z-index: 3;
+}
+
+.history-heading{
+    position: absolute;
+    left: 0%;
+    top: -10%;
+}
+.history .skills li {
+    padding: 4.5vh 0 4.5vh 16%;
+}
+.history .skills li:first-child{
+    border-top: none;
+}
+
+.history .skills li p{
+    font-size: 3.2rem;
+    font-weight: 600;
+    font-family: var(--secondary-font);
+    letter-spacing: -1px;
+}
+.history .skills li .designation span{
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-family: var(--primary-font);
+}
+
+.companies .etc{
+    font-size: 9rem;
+    letter-spacing: 0.5rem;
+    color: var(--primary-text);
+    line-height: 0;
+    padding-left: 16%;
+}
+
+.work_video{
+    margin-top: 28vh;
+}
+.video_wrapper video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.testimonials{
+    padding-top: 19vh;
+}
+.testimonials h4{
+    font-size: 1.4rem;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-weight: 400;
+    color: var(--primary-text);
+    border-bottom: 1px solid var(--primary-border);
+    padding-bottom: 5rem;
+}
+.testimonials .review{
+    padding-top: 14vh;
+    padding-bottom: 14vh;
+    border-bottom: 1px solid var(--primary-border);
+}
+.testimonials .review:last-child{
+    border-bottom: none;
+}
+.testimonials .review h2{
+    font-size: 6.25rem;
+    font-weight: 600;
+    font-family: var(--primary-font);
+    letter-spacing: -2px;
+    line-height: 7.2rem;
+    word-spacing: 0.5rem;
+    color: var(--primary-text);
+    max-width: 65%;
+}
+.testimonials .review p{
+    font-size: 1.3rem;
+}
+.testimonials .review span{
+    font-size: 1.3rem;
+    color: var(--secondary-text);
+}
+.testimonials .review .quote{
+    transform: translate(-6%,140%);
 }

@@ -20,6 +20,8 @@
     --primary-text : #CCE3FF;
     --secondary-text : rgba(204, 227, 255, 0.5);
     --tertiary-text : #00FF77;
+
+    --primary-border: rgba(92, 121, 153,0.3);
 }
 
 html {

@@ -40,7 +40,9 @@ document.addEventListener("mousemove", function(event){
 let no_cursor_elements = [
     ".nav-right .links",
     ".nav-right .sound",
-    ".skills"
+    ".skills",
+    ".history .skills",
+    ".companies .skills",
 ]
 
 function AddListeners(){
@@ -53,6 +55,20 @@ function AddListeners(){
         });
     
         document.querySelector(elem).addEventListener("mouseout",()=>{
+            ball.style.height = ballSize+"px";
+            ball.style.width = ballSize+"px";
+        });
+    })
+
+    document.querySelectorAll('.expand-cursor').forEach((elem)=>{
+        
+        elem.addEventListener("mousemove",()=>{
+            ball.style.height = 400+"px";
+            ball.style.width = 400+"px";
+        });
+    
+        elem.addEventListener("mouseout",()=>{
+            console.log("dfa");
             ball.style.height = ballSize+"px";
             ball.style.width = ballSize+"px";
         });
