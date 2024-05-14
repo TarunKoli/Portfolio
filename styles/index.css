@@ -104,7 +104,8 @@ main{
 main .landing-text{
     width: min-content;
 }
-main .landing-text h4{
+main .landing-text h4,
+.conclusion h4{
     font-size: 1.5rem;
     font-family: var(--primary-font);
     text-transform: uppercase;
@@ -113,14 +114,20 @@ main .landing-text h4{
     margin-top: 5%;
     margin-bottom: 30px;
 }
-main .landing-text h1{
+.conclusion h4{
+    margin-top: 0;
+}
+main .landing-text h1,
+.conclusion h1{
     font-size: 12.8rem;
     font-weight: 600;
     line-height: 11rem;
     letter-spacing: -6px;
     font-family: var(--primary-font);
+    text-transform: uppercase;
 }
-main .landing-text h1>span{
+main .landing-text h1>span,
+.conclusion h1>span{
     color: var(--tertiary-text);
 }
 
@@ -348,5 +355,110 @@ main .landing-text h1>span{
     color: var(--secondary-text);
 }
 .testimonials .review .quote{
-    transform: translate(-6%,140%);
+    position: absolute;
+    top: -5%;
+    left: -10%;
+}
+
+.testimonials .profile_pics{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding: 9% 0 12% 0;
+}
+.testimonials .profile_pics .profile_wrapper{
+    position: sticky;
+    top: 42%;
+    left: 0;
+    bottom: -100%;
+}
+.testimonials .profile_pics .person{
+    height: 9rem;
+    width: 9rem;
+    border-radius: 50%;
+    margin: 2rem 0;
+    overflow: hidden;
+    position: relative;
+}
+.testimonials .profile_pics .person::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+    width: 100%;
+    background: var(--primary-light);
+}
+.profile_pics .person img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.test{
+    height: 1200px;
+    border: 2px solid red;
+}
+
+.conclude{
+    background: url(../assets/conc.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 720px;
+    width: 100%;
+    color: var(--primary-text);
+}
+.conclusion p{
+    font-size: 14px;
+}
+
+footer{
+    padding-top: 23vh;
+    padding-bottom: 12vh;
+    padding-left: 16.666667%;
+}
+
+footer h4{
+    font-size: 1.3rem;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-weight: 500;
+    margin-bottom: 4.2rem;
+    font-weight: 400;
+}
+footer .footer_menu li{
+    list-style: none;
+    margin: 0;
+    font-size: 3.2rem;
+    font-weight: 600;
+    font-family: var(--primary-font);
+    color: var(--primary-text);
+    line-height: 1.1;
+    position: relative;
+    padding-left: 6%;
+}
+footer .footer_menu li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 30%;
+    height: 100%;
+    width: 100%;
+    background: url(../assets/Icons/list.svg);
+    background-repeat: no-repeat;
+}
+footer .contact p{
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: var(--primary-font);
+    color: var(--primary-text);
+}
+footer .contact span{
+    font-size: 1.2rem;
+    color: var(--secondary-text);
+    font-weight: 500;
 }

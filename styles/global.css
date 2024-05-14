@@ -11,6 +11,8 @@
     --primary: #030E1A;
     --secondary: #CCE3FF;
     --tertiary: #00FF77;
+    --primary-light: rgba(3, 14, 26, 0.8);
+    --primary-lightest: rgba(3, 14, 26, 0.3);
     --secondary-light: rgba(204, 227, 255, 0.5);
     --secondary-lightest: rgba(204, 227, 255, 0.2);
 
