@@ -22,8 +22,13 @@
     --primary-text : #CCE3FF;
     --secondary-text : rgba(204, 227, 255, 0.5);
     --tertiary-text : #00FF77;
+    --alter-text : #030E1A;
 
     --primary-border: rgba(92, 121, 153,0.3);
+
+    --size: 40px;
+    --x: 0;
+    --y: 0;
 }
 
 html {

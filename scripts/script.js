@@ -1,6 +1,7 @@
 //https://www.superhi.com/video/smooth-movements-with-javascript
 
-const ball = document.querySelector(".mouse");
+// const ball = document.querySelector(".mouse");
+var r = document.querySelector(':root');
 
 let mouseX = 0;
 let mouseY = 0;
@@ -21,11 +22,8 @@ function animate(){
   ballX = ballX + (distX * speed);
   ballY = ballY + (distY * speed);
   
-//   ball.style.height = ballSize+"px";
-//   ball.style.width = ballSize+"px";
-
-  ball.style.left = ballX + "px";
-  ball.style.top = ballY + "px";
+  r.style.setProperty('--x', ballX+"px");
+  r.style.setProperty('--y', ballY+"px");
   
   requestAnimationFrame(animate);
 }
@@ -50,27 +48,22 @@ function AddListeners(){
     no_cursor_elements.forEach((elem)=>{
 
         document.querySelector(elem).addEventListener("mousemove",()=>{
-            ball.style.height = 0+"px";
-            ball.style.width = 0+"px";
+            r.style.setProperty('--size', 0+"px");
         });
     
         document.querySelector(elem).addEventListener("mouseout",()=>{
-            ball.style.height = ballSize+"px";
-            ball.style.width = ballSize+"px";
+            r.style.setProperty('--size', ballSize+"px");
         });
     })
 
     document.querySelectorAll('.expand-cursor').forEach((elem)=>{
         
         elem.addEventListener("mousemove",()=>{
-            ball.style.height = 400+"px";
-            ball.style.width = 400+"px";
+            r.style.setProperty('--size', 400+"px");
         });
     
         elem.addEventListener("mouseout",()=>{
-            console.log("dfa");
-            ball.style.height = ballSize+"px";
-            ball.style.width = ballSize+"px";
+          r.style.setProperty('--size', ballSize+"px");
         });
     })
 

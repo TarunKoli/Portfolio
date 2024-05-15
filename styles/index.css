@@ -5,17 +5,50 @@ body{
 
 .mouse{
     background: var(--tertiary-text);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
     pointer-events: none;
     position: absolute;
     top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    mix-blend-mode: difference;
-    z-index: 5;
-    transition: 0.3s width, 0.3s height;
+    left: 0;    
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    z-index: 50;
+
+    -webkit-mask-image: url(../assets/mask.svg);
+    mask-image: url(../assets/mask.svg);
+    
+    /* -webkit-mask-position: calc(var(--x) - var(--size)/2) calc(var(--y) - var(--size)/2), center; */
+    mask-position: calc(var(--x) - var(--size)/2) calc(var(--y) - var(--size)/2);
+    
+    mask-repeat: no-repeat;
+    -webkit-mask-size: var(--size), contain;
+    mask-size: var(--size), contain;
+
+    -webkit-mask-origin: content-box;
+    mask-origin: content-box;
+
+    transition: 0.5s mask-size;
+    /* mix-blend-mode: difference; */
+}
+
+.green-marker,
+.green-marker main,
+.green-marker .landing-text h1>span,
+.green-marker .about-me h4,
+.green-marker .experience h4,
+.green-marker .client_info h4,
+.green-marker .about-me h2,
+.green-marker .experience h2,
+.green-marker .client_info h2,
+.green-marker .about-me h2>strong,
+.green-marker .experience h2>strong,
+.green-marker .client_info h2>strong,
+.green-marker .testimonials h4,
+.green-marker .testimonials .review h2,
+.green-marker .testimonials .review span,
+.green-marker .conclude,
+.green-marker .conclusion h1>span{
+    color: var(--alter-text);   
 }
 
 .nav-left,
@@ -100,7 +133,9 @@ main{
     background-attachment: fixed;
     color: var(--primary-text);
 }
-
+.green-marker main{
+    background: none;
+}
 main .landing-text{
     width: min-content;
 }
@@ -130,7 +165,6 @@ main .landing-text h1>span,
 .conclusion h1>span{
     color: var(--tertiary-text);
 }
-
 
 .about-me,
 .client_info{
@@ -165,8 +199,6 @@ main .landing-text h1>span,
     font-weight: 600;
     color: var(--tertiary-text);
 }
-
-
 
 .my-skills{
     margin-bottom: 28vh;
@@ -269,6 +301,9 @@ main .landing-text h1>span,
     padding-left: 16%;
     /* position: relative; */
     z-index: 0;
+}
+.green-marker .experience{
+    background: var(--tertiary);
 }
 .experience .expand-cursor{
     z-index: 3;
@@ -410,6 +445,9 @@ main .landing-text h1>span,
     height: 720px;
     width: 100%;
     color: var(--primary-text);
+}
+.green-marker .conclude{
+    background: var(--tertiary);
 }
 .conclusion p{
     font-size: 14px;
