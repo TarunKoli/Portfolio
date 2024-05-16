@@ -27,7 +27,6 @@ body{
     -webkit-mask-origin: content-box;
     mask-origin: content-box;
 
-    transition: 0.5s mask-size;
     /* mix-blend-mode: difference; */
 }
 

@@ -21,7 +21,7 @@ function animate(){
   
   ballX = ballX + (distX * speed);
   ballY = ballY + (distY * speed);
-  
+
   r.style.setProperty('--x', ballX+"px");
   r.style.setProperty('--y', ballY+"px");
   
@@ -45,6 +45,8 @@ let no_cursor_elements = [
 
 function AddListeners(){
 
+    var expand = false;
+
     no_cursor_elements.forEach((elem)=>{
 
         document.querySelector(elem).addEventListener("mousemove",()=>{
@@ -59,11 +61,23 @@ function AddListeners(){
     document.querySelectorAll('.expand-cursor').forEach((elem)=>{
         
         elem.addEventListener("mousemove",()=>{
-            r.style.setProperty('--size', 400+"px");
+            
+            function animate(val) {
+                r.style.setProperty('--size', val+"px");
+
+                if (parseInt(val)<=400) {
+                    window.requestAnimationFrame(function(){animate(val+10)});
+                }
+            }
+
+            if(!expand){
+                expand = true;
+                animate(40);
+            }
         });
     
         elem.addEventListener("mouseout",()=>{
-          r.style.setProperty('--size', ballSize+"px");
+            expand = false;
         });
     })
 
