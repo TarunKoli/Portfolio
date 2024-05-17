@@ -10,6 +10,7 @@ let ballX = 0;
 let ballY = 0;
 
 let ballSize = 40;
+let updatedSize = 40;
 
 let speed = 0.05;
 
@@ -60,10 +61,11 @@ function AddListeners(){
 
     document.querySelectorAll('.expand-cursor').forEach((elem)=>{
         
-        elem.addEventListener("mousemove",()=>{
+        elem.addEventListener("mouseenter",()=>{
             
             function animate(val) {
                 r.style.setProperty('--size', val+"px");
+                updatedSize = val;
 
                 if (parseInt(val)<=400) {
                     window.requestAnimationFrame(function(){animate(val+10)});
@@ -72,15 +74,26 @@ function AddListeners(){
 
             if(!expand){
                 expand = true;
-                animate(40);
+                animate(updatedSize);
             }
         });
     
-        elem.addEventListener("mouseout",()=>{
-            expand = false;
+        elem.addEventListener("mouseleave",()=>{
+            function animate(val) {
+                r.style.setProperty('--size', val+"px");
+                updatedSize = val;
+
+                if (parseInt(val)>=40) {
+                    window.requestAnimationFrame(function(){animate(val-10)});
+                }
+            }
+
+            if(expand){
+                expand = false;
+                animate(updatedSize);
+            }
         });
     })
 
 }
 AddListeners();
-

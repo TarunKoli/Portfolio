@@ -17,7 +17,7 @@ body{
     -webkit-mask-image: url(../assets/mask.svg);
     mask-image: url(../assets/mask.svg);
     
-    /* -webkit-mask-position: calc(var(--x) - var(--size)/2) calc(var(--y) - var(--size)/2), center; */
+    -webkit-mask-position: calc(var(--x) - var(--size)/2) calc(var(--y) - var(--size)/2), center;
     mask-position: calc(var(--x) - var(--size)/2) calc(var(--y) - var(--size)/2);
     
     mask-repeat: no-repeat;
@@ -380,6 +380,9 @@ main .landing-text h1>span,
     word-spacing: 0.5rem;
     color: var(--primary-text);
     max-width: 65%;
+}
+.green-marker .testimonials .review h2{
+    max-width: 66%;
 }
 .testimonials .review p{
     font-size: 1.3rem;
