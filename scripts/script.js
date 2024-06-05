@@ -47,15 +47,41 @@ let no_cursor_elements = [
 function AddListeners(){
 
     var expand = false;
+    var shrink = false;
 
     no_cursor_elements.forEach((elem)=>{
 
-        document.querySelector(elem).addEventListener("mousemove",()=>{
-            r.style.setProperty('--size', 0+"px");
+        document.querySelector(elem).addEventListener("mouseenter",()=>{
+            let speed = 4;
+            function animate(val) {
+                r.style.setProperty('--size', val+"px");
+                updatedSize = val;
+
+                if (parseInt(val)>0) {
+                    window.requestAnimationFrame(function(){animate( val-speed < 0 ? 0 : val-speed )});
+                }
+            }
+
+            if(!shrink){
+                shrink = true;
+                animate(updatedSize);
+            }
         });
     
-        document.querySelector(elem).addEventListener("mouseout",()=>{
-            r.style.setProperty('--size', ballSize+"px");
+        document.querySelector(elem).addEventListener("mouseleave",()=>{
+            function animate(val) {
+                r.style.setProperty('--size', val+"px");
+                updatedSize = val;
+
+                if (parseInt(val)<39) {
+                    window.requestAnimationFrame(function(){animate( val+2 > 40 ? 40 : val+2 )});
+                }
+            }
+
+            if(shrink){
+                shrink = false;
+                animate(updatedSize);
+            }
         });
     })
 
@@ -83,8 +109,8 @@ function AddListeners(){
                 r.style.setProperty('--size', val+"px");
                 updatedSize = val;
 
-                if (parseInt(val)>=40) {
-                    window.requestAnimationFrame(function(){animate(val-10)});
+                if (parseInt(val)>40) {
+                    window.requestAnimationFrame(function(){animate( val-10 < 40 ? 40: val-10)});
                 }
             }
 
