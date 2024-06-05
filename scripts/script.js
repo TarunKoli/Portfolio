@@ -87,8 +87,9 @@ function AddListeners(){
 
     document.querySelectorAll('.expand-cursor').forEach((elem)=>{
         
-        elem.addEventListener("mouseenter",()=>{
-            
+        elem.addEventListener("mouseenter",(e)=>{
+            e.stopPropagation();
+
             function animate(val) {
                 r.style.setProperty('--size', val+"px");
                 updatedSize = val;
@@ -121,5 +122,19 @@ function AddListeners(){
         });
     })
 
+    document.querySelector('body').addEventListener("mousemove",()=>{
+        
+        function animate(val) {
+            r.style.setProperty('--size', val+"px");
+            updatedSize = val;
+
+            if (parseInt(val)>40) {
+                window.requestAnimationFrame(function(){animate( val-10 < 40 ? 40: val-10)});
+            }
+        }
+       if(!expand){
+            animate(updatedSize);
+       }
+    })
 }
 AddListeners();
