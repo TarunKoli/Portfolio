@@ -171,9 +171,6 @@ main .landing-text h1>span,
     margin-bottom: 28vh;
     margin-left: 16% !important;
 }
-.green-marker .about-me{
-    margin-left: 15% !important;
-}
 .about-me h4,
 .experience h4,
 .client_info h4{
@@ -503,21 +500,4 @@ footer .contact span{
     font-size: 1.2rem;
     color: var(--secondary-text);
     font-weight: 500;
-}
-
-/* animations */
-.about-me-text{
-    position: relative;
-}
-.about-me-text .is-masking .line{
-    clip-path: inset(0 0% 0 0);
-    border: 2px solid red;
-}
-.about-me-text .is-bg{
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.about-me-text .is-bg h2{
-    color: rgba(204, 227, 255, 0.3);
 }
