@@ -30,6 +30,17 @@ function animate(){
 }
 animate();
 
+
+const main = document.querySelector('.body_wrapper');
+let damping = 0.1;
+function animateScroll(){
+
+    main.style.top = -(window.scrollY)+'px';
+
+    requestAnimationFrame(animateScroll);
+}
+animateScroll();
+
 document.addEventListener("mousemove", function(event){
   mouseX = event.pageX;
   mouseY = event.pageY;
@@ -138,3 +149,13 @@ function AddListeners(){
     })
 }
 AddListeners();
+
+window.onload = function(){
+    var height = document.documentElement.scrollHeight;
+    document.getElementsByTagName('body')[0].style.height = height + 'px';
+    document.querySelector('.body_wrapper').style.position = 'fixed';
+}
+
+document.getElementsByTagName('body')[0].onscroll = (e) => {
+    console.log(window.scrollY);
+};

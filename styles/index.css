@@ -1,6 +1,15 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     background: var(--primary);
     color: var(--primary-text);
+}
+.body_wrapper{
+    height: auto;
+    top: 0;
+    left: 0;
+    background: var(--primary);
 }
 
 .mouse{
