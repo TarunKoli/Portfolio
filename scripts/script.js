@@ -32,10 +32,15 @@ animate();
 
 
 const main = document.querySelector('.body_wrapper');
-let damping = 0.1;
+let damping = 0.03;
+let pageDist = 0;
 function animateScroll(){
 
-    main.style.top = -(window.scrollY)+'px';
+    let dist = window.scrollY - pageDist;
+
+    pageDist = pageDist + (dist * damping);
+
+    main.style.top = -(pageDist)+'px';
 
     requestAnimationFrame(animateScroll);
 }
