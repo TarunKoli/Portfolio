@@ -58,6 +58,7 @@ let no_cursor_elements = [
     ".skills",
     ".history .skills",
     ".companies .skills",
+    ".footer_menu"
 ]
 
 function AddListeners(){

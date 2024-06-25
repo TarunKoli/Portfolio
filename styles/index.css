@@ -499,7 +499,35 @@ footer .footer_menu li::before{
     background: url(../assets/Icons/list.svg);
     background-repeat: no-repeat;
 }
-footer .contact p{
+footer .footer_menu li::after,
+footer .contact .alter-contact::after{
+    content: attr(data-after);
+    position: absolute;
+    top: 0;
+    left: 5%;
+    height: 100%;
+    width: 90%;
+    background-color: var(--tertiary);
+    color: var(--primary);
+    clip-path: inset(50% 0 50% 0);
+    transition: 0.3s;
+}
+footer .contact .alter-contact::after{
+    left: -5px;
+    padding-left: 5px;
+    height: 100%;
+}
+footer .footer_menu li:hover:after,
+footer .contact .alter-contact:hover::after{
+    clip-path: inset(0% 0 0% 0);
+    cursor: pointer;
+}
+footer .contact,
+footer .alter-contact {
+    position: relative;
+}
+footer .contact p,
+footer .contact .alter-contact::after{
     font-size: 1.4rem;
     font-weight: 500;
     font-family: var(--primary-font);
@@ -509,4 +537,10 @@ footer .contact span{
     font-size: 1.2rem;
     color: var(--secondary-text);
     font-weight: 500;
+    z-index: 30;
+    position: relative;
+}
+footer .contact .alter-contact:hover>span,
+footer .contact .alter-contact::after{
+    color: var(--primary);
 }
