@@ -234,6 +234,21 @@ main .landing-text h1>span,
     cursor: default;
     position: relative;
 }
+.history-mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--primary);
+    background-color: var(--tertiary);
+    clip-path: inset(50% 0 50% 0);
+    padding: 4.5vh 0 4.5vh 16%;
+    transition: 0.3s;
+}
+.history .skills li:hover .history-mask{
+    clip-path: inset(0% 0 0% 0);
+}
 .my-skills .skills li:last-child,
 .history .skills li:last-child,
 .companies .skills li:last-child{
@@ -241,7 +256,6 @@ main .landing-text h1>span,
 }
 
 .my-skills .skills li::before,
-.history .skills li::before,
 .companies .skills li::before{
     content: "";
     position: absolute;
@@ -292,7 +306,6 @@ main .landing-text h1>span,
     color: var(--tertiary-text);
 }
 .my-skills .skills li:hover::before,
-.history .skills li:hover::before,
 .companies .skills li:hover::before{
     transform: rotateX(0deg);
 }
