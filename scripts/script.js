@@ -55,10 +55,6 @@ document.addEventListener("mousemove", function(event){
 let no_cursor_elements = [
     ".nav-right .links",
     ".nav-right .sound",
-    ".skills",
-    ".history .skills",
-    ".companies .skills",
-    ".footer_menu"
 ]
 
 function AddListeners(){
@@ -66,9 +62,8 @@ function AddListeners(){
     var expand = false;
     var shrink = false;
 
-    no_cursor_elements.forEach((elem)=>{
-
-        document.querySelector(elem).addEventListener("mouseenter",()=>{
+    document.querySelectorAll('.no-cursor').forEach((elem)=>{
+        elem.addEventListener("mouseenter",()=>{
             let speed = 4;
             function animate(val) {
                 r.style.setProperty('--size', val+"px");
@@ -85,7 +80,7 @@ function AddListeners(){
             }
         });
     
-        document.querySelector(elem).addEventListener("mouseleave",()=>{
+        elem.addEventListener("mouseleave",()=>{
             function animate(val) {
                 r.style.setProperty('--size', val+"px");
                 updatedSize = val;
