@@ -160,6 +160,7 @@ window.onload = function(){
 
 const comments = document.querySelectorAll('.comments .review');
 const persons = document.querySelectorAll('.comments .person');
+const pointer_wrap = document.querySelector('.comments .profile_wrapper');
 const pointer = document.querySelector('.comments .profile-pointer');
 
 document.getElementsByTagName('body')[0].onscroll = (e) => {
@@ -175,6 +176,11 @@ document.getElementsByTagName('body')[0].onscroll = (e) => {
         if (dim.y+(dim.height/2) < viewHeight && (dim.y+dim.height+(dim.height/2)) > viewHeight ) {
             let index = parseInt(sec.getAttribute("data-profile"));
             persons[index].classList.add('active');
+
+            const profileDim = persons[index].getBoundingClientRect();
+            const wrapDim = pointer_wrap.getBoundingClientRect();
+            pointer.style.top = profileDim.top-wrapDim.top+(profileDim.height/2)-5+'px';
+        
         }else{
             let index = parseInt(sec.getAttribute("data-profile"));
             persons[index].classList.remove('active');
