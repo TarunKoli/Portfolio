@@ -431,6 +431,18 @@ main .landing-text h1>span,
     left: 0;
     bottom: -100%;
 }
+.testimonials .profile_pics .profile_wrapper .profile-pointer{
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 0;
+    height: 0;
+    border-left: 0.8rem solid transparent;
+    border-right: 0.8rem solid transparent;
+    border-bottom: 0.8rem solid var(--tertiary);
+    transform: rotateZ(-90deg);
+    transition: 0.3s;
+}
 .testimonials .profile_pics .person{
     height: 9rem;
     width: 9rem;
@@ -448,6 +460,9 @@ main .landing-text h1>span,
     height: 100%;
     width: 100%;
     background: var(--primary-light);
+}
+.testimonials .profile_pics .person.active::before{
+    background: none;
 }
 .profile_pics .person img{
     height: 100%;

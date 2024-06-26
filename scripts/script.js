@@ -157,6 +157,27 @@ window.onload = function(){
     document.querySelector('.body_wrapper').style.position = 'fixed';
 }
 
+
+const comments = document.querySelectorAll('.comments .review');
+const persons = document.querySelectorAll('.comments .person');
+const pointer = document.querySelector('.comments .profile-pointer');
+
 document.getElementsByTagName('body')[0].onscroll = (e) => {
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
+
+    comments.forEach((sec, i) => {
+        var viewHeight = document.documentElement.clientHeight;
+        var viewWidth = document.documentElement.clientWidth;
+        var dim = sec.getBoundingClientRect();
+    
+        // console.log(dim.y, viewHeight);
+        
+        if (dim.y+(dim.height/2) < viewHeight && (dim.y+dim.height+(dim.height/2)) > viewHeight ) {
+            let index = parseInt(sec.getAttribute("data-profile"));
+            persons[index].classList.add('active');
+        }else{
+            let index = parseInt(sec.getAttribute("data-profile"));
+            persons[index].classList.remove('active');
+        }
+    });
 };
