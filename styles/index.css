@@ -58,6 +58,10 @@ body{
 .green-marker .conclusion h1>span{
     color: var(--alter-text);   
 }
+.green-marker .nav-left .logo img,
+.green-marker .nav-left .links img{
+    filter: invert(1);
+}
 
 .nav-left,
 .nav-right{
