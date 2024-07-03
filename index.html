@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/index.css">
     <title>Tarun Koli | Portfolio</title>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"
+          }
+        }
+    </script>
 </head>
 <body>
 
@@ -171,7 +179,7 @@
         </div>
     </section>
 
-    <section class="companies">
+    <section class="render-element companies position-relative">
         <ul class="skills no-cursor">
             <li class="skills_list_item d-flex align-items-center justify-content-between" data-val="3d">
                 <p class="m-0 p-0">FORD</p>
@@ -563,6 +571,7 @@
 
     </main>
 
+    <script type="module" src="./scripts/earth.js"></script>
     <script src="./scripts/script.js"></script>
 </body>
 </html>

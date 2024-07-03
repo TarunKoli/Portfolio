@@ -365,6 +365,15 @@ main .landing-text h1>span,
     padding-left: 16%;
 }
 
+.render-element canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: auto;
+    width: auto;
+}
+
 .work_video{
     margin-top: 28vh;
 }

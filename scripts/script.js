@@ -162,16 +162,15 @@ const comments = document.querySelectorAll('.comments .review');
 const persons = document.querySelectorAll('.comments .person');
 const pointer_wrap = document.querySelector('.comments .profile_wrapper');
 const pointer = document.querySelector('.comments .profile-pointer');
+const earth = document.querySelector('.render-element canvas');
 
 document.getElementsByTagName('body')[0].onscroll = (e) => {
-    // console.log(window.scrollY);
+
+    var viewHeight = document.documentElement.clientHeight;
+    var viewWidth = document.documentElement.clientWidth;
 
     comments.forEach((sec, i) => {
-        var viewHeight = document.documentElement.clientHeight;
-        var viewWidth = document.documentElement.clientWidth;
         var dim = sec.getBoundingClientRect();
-    
-        // console.log(dim.y, viewHeight);
         
         if (dim.y+(dim.height/2) < viewHeight && (dim.y+dim.height+(dim.height/2)) > viewHeight ) {
             let index = parseInt(sec.getAttribute("data-profile"));
@@ -186,4 +185,16 @@ document.getElementsByTagName('body')[0].onscroll = (e) => {
             persons[index].classList.remove('active');
         }
     });
+
+    (   
+        ()=>{
+            console.log(earth);
+            var dim = earth.getBoundingClientRect();
+            console.log(viewHeight, dim.y);
+            if (dim.y < viewHeight) {
+
+            }
+        }
+    )()
+
 };
