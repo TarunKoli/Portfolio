@@ -18,7 +18,7 @@ const camera = new THREE.PerspectiveCamera(
 
 const orbit = new OrbitControls(camera, renderer.domElement);
 
-camera.position.set(5, 10, 10);
+camera.position.set(-5, 10, 10);
 orbit.update();
 
 // Enable || Disable interaction with model
@@ -34,14 +34,14 @@ scene.add( ambientLight );
 
 // Adding Directional Light to scene
 const directionalLight = new THREE.DirectionalLight(0x030E1A);
-directionalLight.intensity = 300;
-directionalLight.position.set(1, 0, -.25);
+directionalLight.intensity = 250;
+directionalLight.position.set(1, 0, .5);
 scene.add( directionalLight );
 
 
 
 // configuring earth sphere for scene
-const sphereGeometry = new THREE.SphereGeometry(3.8, 64, 64);
+const sphereGeometry = new THREE.SphereGeometry(4, 64, 64);
 
 const color_map = new THREE.TextureLoader().load('assets/color_map.webp');
 const normal_map = new THREE.TextureLoader().load('assets/normal_map.webp');
@@ -50,6 +50,7 @@ const sphereMaterial = new THREE.MeshStandardMaterial({ map: color_map, normalMa
 
 const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
 sphere.scale.set(2,2,2);
+sphere.rotation.z=-11;
 scene.add(sphere);
 
 sphere.position.set(0, 1, 0);
