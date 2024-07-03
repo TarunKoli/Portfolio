@@ -198,7 +198,7 @@ function animateScroll(){
     main.style.top = -(pageDist)+'px';
 
     if(translateEarth)
-        earth.style.transform = "translateY("+((pageDist-initRead)*0.01)+"%)";
+        earth.style.transform = "translateY("+((pageDist-initRead)*0.015)+"%)";
 
     requestAnimationFrame(animateScroll);
 }

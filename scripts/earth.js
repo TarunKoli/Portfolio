@@ -34,7 +34,7 @@ scene.add( ambientLight );
 
 // Adding Directional Light to scene
 const directionalLight = new THREE.DirectionalLight(0x030E1A);
-directionalLight.intensity = 250;
+directionalLight.intensity = 300;
 directionalLight.position.set(1, 0, .5);
 scene.add( directionalLight );
 
