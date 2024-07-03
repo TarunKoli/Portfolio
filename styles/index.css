@@ -365,10 +365,16 @@ main .landing-text h1>span,
     padding-left: 16%;
 }
 
-.render-element canvas{
+.render-element{
     position: absolute;
-    top: 0;
+    top: -5%;
     left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.render-element canvas{
     z-index: -1;
     height: auto;
     width: auto;

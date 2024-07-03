@@ -41,7 +41,7 @@ scene.add( directionalLight );
 
 
 // configuring earth sphere for scene
-const sphereGeometry = new THREE.SphereGeometry(4, 64, 64);
+const sphereGeometry = new THREE.SphereGeometry(3.8, 64, 64);
 
 const color_map = new THREE.TextureLoader().load('assets/color_map.webp');
 const normal_map = new THREE.TextureLoader().load('assets/normal_map.webp');
@@ -57,10 +57,12 @@ sphere.position.set(0, 1, 0);
 
 renderer.render(scene, camera);
 
-let damping = 0.002;
+let dampingY = 0.0005;
+let dampingX = 0.0005;
 function animate(time) {
     // sphere.rotation.y = -(time/2000);
-    sphere.rotation.y = -(window.scrollY*damping);
+    sphere.rotation.y = -(pageDist * dampingY);
+    sphere.rotation.x = (pageDist * dampingX);
     renderer.render(scene, camera);
 }
 

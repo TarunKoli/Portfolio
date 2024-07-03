@@ -30,22 +30,6 @@ function animate(){
 }
 animate();
 
-
-const main = document.querySelector('.body_wrapper');
-let damping = 0.03;
-let pageDist = 0;
-function animateScroll(){
-
-    let dist = window.scrollY - pageDist;
-
-    pageDist = pageDist + (dist * damping);
-
-    main.style.top = -(pageDist)+'px';
-
-    requestAnimationFrame(animateScroll);
-}
-animateScroll();
-
 document.addEventListener("mousemove", function(event){
   mouseX = event.pageX;
   mouseY = event.pageY;
@@ -162,7 +146,9 @@ const comments = document.querySelectorAll('.comments .review');
 const persons = document.querySelectorAll('.comments .person');
 const pointer_wrap = document.querySelector('.comments .profile_wrapper');
 const pointer = document.querySelector('.comments .profile-pointer');
-const earth = document.querySelector('.render-element canvas');
+const earth = document.querySelector('.render-element');
+var initRead = 0;
+var translateEarth = false;
 
 document.getElementsByTagName('body')[0].onscroll = (e) => {
 
@@ -188,13 +174,32 @@ document.getElementsByTagName('body')[0].onscroll = (e) => {
 
     (   
         ()=>{
-            console.log(earth);
             var dim = earth.getBoundingClientRect();
-            console.log(viewHeight, dim.y);
-            if (dim.y < viewHeight) {
-
-            }
+            if (dim.y < viewHeight && dim.y > -(viewHeight)) {
+                
+                if(initRead === 0) initRead = pageDist;
+            
+                translateEarth = true;
+            }else translateEarth = false;
         }
     )()
 
 };
+
+const main = document.querySelector('.body_wrapper');
+let damping = 0.03;
+let pageDist = 0;
+function animateScroll(){
+
+    let dist = window.scrollY - pageDist;
+
+    pageDist = pageDist + (dist * damping);
+
+    main.style.top = -(pageDist)+'px';
+
+    if(translateEarth)
+        earth.style.transform = "translateY("+((pageDist-initRead)*0.01)+"%)";
+
+    requestAnimationFrame(animateScroll);
+}
+animateScroll();
