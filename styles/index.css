@@ -303,11 +303,18 @@ main .landing-text h1>span,
     z-index: 6;
     pointer-events: none;
 }
+.companies .skills li>span{
+    color: transparent;
+    transition: 0.5s;
+}
 
 .my-skills .skills li:hover,
 .history .skills li:hover,
 .companies .skills li:hover{
     color: var(--tertiary-text);
+}
+.companies .skills li:hover > span{
+    color: var(--primary);
 }
 .my-skills .skills li:hover::before,
 .companies .skills li:hover::before{
@@ -367,7 +374,7 @@ main .landing-text h1>span,
 
 .render-element{
     position: absolute;
-    top: -10%;
+    top: -15%;
     left: 0;
     height: 100%;
     width: 100%;
