@@ -64,20 +64,44 @@ body{
 }
 
 .nav-left,
-.nav-right{
+.nav-right {
     position: fixed;
     top: 0;
     height: 100vh;
     padding-top: 4%;
     padding-bottom: 5%;
 }
-.nav-left{
+
+.nav-left {
     left: 4%;
 }
+
+.nav-left .ic_wrap {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 5px 0;
+    margin-left: -25%;
+}
+
+.nav-left .ic_btn {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    will-change: transform;
+}
+
+.nav-left .ic_btn,
+.nav-left .ic_content {
+    transition: 150ms ease;
+}
 .nav-left .links img{
-    width: 18px;
-    height: 18px;
-    margin: 18px 0;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
 }
 
