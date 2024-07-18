@@ -311,7 +311,8 @@ main .landing-text h1>span,
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
-.my-skills .skills li .para_mask{
+.my-skills .skills li .para_mask,
+.companies .skills li .para_mask{
     padding-left: 16%;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -319,7 +320,7 @@ main .landing-text h1>span,
 
 .my-skills .skills li p,
 .history .skills li>p,
-.companies .skills li>p{
+.companies .skills li p{
     text-transform: uppercase;
 }
 .my-skills .skills li>span,
