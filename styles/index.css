@@ -297,6 +297,7 @@ main .landing-text h1>span,
     overflow: hidden;
     transition: 0.5s;
     mix-blend-mode: difference;
+    z-index: 5;
 }
 .my-skills .skills li,
 .companies .skills li,
@@ -310,8 +311,13 @@ main .landing-text h1>span,
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
+.my-skills .skills li .para_mask{
+    padding-left: 16%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
 
-.my-skills .skills li>p,
+.my-skills .skills li p,
 .history .skills li>p,
 .companies .skills li>p{
     text-transform: uppercase;

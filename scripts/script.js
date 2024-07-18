@@ -32,7 +32,7 @@ animate();
 
 const lineMasks = document.querySelectorAll('.line_mask');
 var viewHeight = document.documentElement.clientHeight;
-const fillSpeed = 0.5;
+const fillSpeed = 0.2;
 function animateText(){
     lineMasks.forEach((line,i)=>{
         var dim = line.getBoundingClientRect();
