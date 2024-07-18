@@ -30,6 +30,27 @@ function animate(){
 }
 animate();
 
+const lineMasks = document.querySelectorAll('.line_mask');
+var viewHeight = document.documentElement.clientHeight;
+const fillSpeed = 0.5;
+function animateText(){
+    lineMasks.forEach((line,i)=>{
+        var dim = line.getBoundingClientRect();
+        
+        if (dim.y < viewHeight-100 && dim.y > -(viewHeight)) {
+
+            var size = 100-((viewHeight-100-dim.y)*fillSpeed);
+            if (size<1) size=0;
+            else if(size>99) size=100;
+
+            line.style.setProperty('--size', size+"%");
+        }
+    })
+
+    requestAnimationFrame(animateText);
+}
+animateText();
+
 document.addEventListener("mousemove", function(event){
   mouseX = event.pageX;
   mouseY = event.pageY;

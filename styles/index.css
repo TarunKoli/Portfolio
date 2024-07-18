@@ -622,3 +622,22 @@ footer .contact .alter-contact:hover>span,
 footer .contact .alter-contact::after{
     color: var(--primary);
 }
+
+.para{
+    opacity: 0.3;
+}
+.para h2:not(:last-child),
+.para_mask h2:not(:last-child){
+    margin: 0;
+}
+.para_mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.para_mask .line_mask{
+    clip-path: inset(0 var(--size) 0 0);
+    /* transition: 0.1s; */
+}
