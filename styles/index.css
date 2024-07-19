@@ -449,7 +449,8 @@ main .landing-text h1>span,
 .testimonials .review:last-child{
     border-bottom: none;
 }
-.testimonials .review h2{
+.testimonials .review h2,
+.testimonials .review h2 span{
     font-size: 6.25rem;
     font-weight: 600;
     font-family: var(--primary-font);
