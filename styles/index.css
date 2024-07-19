@@ -171,7 +171,7 @@ main{
 }
 .body-load-fade{ 
     opacity: 0;
-    background-size: 85%;
+    background-size: 120%;
     transition: 1s;
 }
 .body-load-fade.active{
@@ -198,6 +198,7 @@ main .landing-text h4,
     margin-top: 0;
 }
 main .landing-text h1,
+.conclusion h1 p,
 .conclusion h1{
     font-size: 12.8rem;
     font-weight: 600;
@@ -210,12 +211,14 @@ main .landing-text h1 span.green,
 .conclusion h1 span.green{
     color: var(--tertiary-text);
 }
-main .landing-text h1 p{
+main .landing-text h1 p,
+.conclusion h1 p{
     overflow: hidden;
     position: relative;
 }
-main .landing-text h1 p span{
-    display: block;
+main .landing-text h1 p span,
+.conclusion h1 p span{
+    display: inline-block;
 }
 .text-rise{
     transform: translateY(100%);

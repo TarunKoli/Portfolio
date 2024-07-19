@@ -162,7 +162,7 @@ window.onload = function(){
     document.querySelector('.body_wrapper').style.position = 'fixed';
 
     const bodyLoadFade = document.querySelectorAll('.body-load-fade');
-    const textRise = document.querySelectorAll('.text-rise');
+    const textRise = document.querySelectorAll('.body-load-fade .text-rise');
 
     bodyLoadFade.forEach((animBox,i)=>{
         animBox.classList.add("active");
@@ -178,6 +178,7 @@ const comments = document.querySelectorAll('.comments .review');
 const persons = document.querySelectorAll('.comments .person');
 const pointer_wrap = document.querySelector('.comments .profile_wrapper');
 const pointer = document.querySelector('.comments .profile-pointer');
+const conclusion = document.querySelector('.conclude');
 const earth = document.querySelector('.render-element');
 var initRead = 0;
 var translateEarth = false;
@@ -214,8 +215,19 @@ document.getElementsByTagName('body')[0].onscroll = (e) => {
                 translateEarth = true;
             }else translateEarth = false;
         }
-    )()
+    )();
 
+    (
+        ()=>{
+            var dim = conclusion.getBoundingClientRect();
+            if (dim.y < viewHeight-(viewHeight/2) && dim.y > -(viewHeight)) {
+                const textRise = conclusion.querySelectorAll('.text-rise');
+                textRise.forEach((text, i)=>{
+                    text.classList.add('active');
+                })
+            }
+        }
+    )()
 };
 
 const main = document.querySelector('.body_wrapper');
