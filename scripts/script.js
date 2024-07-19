@@ -160,6 +160,17 @@ window.onload = function(){
     var height = document.documentElement.scrollHeight;
     document.getElementsByTagName('body')[0].style.height = height + 'px';
     document.querySelector('.body_wrapper').style.position = 'fixed';
+
+    const bodyLoadFade = document.querySelectorAll('.body-load-fade');
+    const textRise = document.querySelectorAll('.text-rise');
+
+    bodyLoadFade.forEach((animBox,i)=>{
+        animBox.classList.add("active");
+    });
+    
+    textRise.forEach((animText, i)=>{
+        animText.classList.add("active");        
+    });
 }
 
 
