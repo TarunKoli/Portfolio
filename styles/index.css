@@ -760,4 +760,65 @@ footer .contact .alter-contact::after{
         font-size: 1.2rem;
         font-weight: 200;
     }
+    .video_wrapper{
+        height: 100vh;
+    }
+    .testimonials h4{
+        padding-left: 5%;
+        padding-bottom: 4rem;
+    }
+    .testimonials .review{
+        padding-left: 5%;
+        padding-top: 25vh;
+    }
+    .green-marker .testimonials .review:nth-child(2) h2{
+        max-width: 75%;
+    }
+    .testimonials .review h2 span{
+        max-width: none;
+    }
+    .testimonials .review h2,
+    .testimonials .review h2 span{
+        font-size: 4.1rem;
+        line-height: 4.5rem;
+        display: inline-block;
+        font-weight: 500;
+    }
+    .testimonials .profile_pics .person{
+        width: 6rem;
+        height: 6rem;
+    }
+    .testimonials .review .quote{
+        top: -100px;
+        left: 0%;
+    }
+    .testimonials .profile_pics{
+        right: 4%;
+    }
+    main .landing-text h1,
+    .conclusion h1 p, 
+    .conclusion h1{
+        font-size: 5.8rem;
+        letter-spacing: -2px;
+        line-height: 6rem;
+    }
+    footer{
+        padding-top: 12vh;
+        padding-left: 3%;
+    }
+    footer h4{
+        font-size: 1.6rem;
+        letter-spacing: 8px;
+    }
+    footer .footer_menu li{
+        font-size: 2.3rem;
+        font-weight: 500;
+        margin-bottom: 0.8rem;
+    }
+    footer .contact{
+        margin-top: 10rem;
+    }
+    footer .footer_menu li::before{
+        left: -5px;
+    }
 }
