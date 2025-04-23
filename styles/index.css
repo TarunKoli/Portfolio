@@ -10,6 +10,7 @@ body{
     top: 0;
     left: 0;
     background: var(--primary);
+    /* transition: transform 0.1s; */
 }
 
 .mouse{
@@ -98,7 +99,7 @@ body{
 
 .nav-left .ic_btn,
 .nav-left .ic_content {
-    transition: 150ms ease;
+    transition: transform 150ms ease;
 }
 .nav-left .links img{
     width: 20px;
@@ -132,7 +133,7 @@ body{
     left: 0;
     height: 100%;
     width: 100%;
-    transition: 0.3s;
+    transition: top 0.3s;
 }
 .nav-right .links a::after{
     top: 100%;
@@ -172,7 +173,7 @@ main{
 .body-load-fade{ 
     opacity: 0;
     background-size: 120%;
-    transition: 1s;
+    transition: opacity 1s, background-size 1s;
 }
 .body-load-fade.active{
     opacity: 1;
@@ -222,7 +223,7 @@ main .landing-text h1 p span,
 }
 .text-rise{
     transform: translateY(100%);
-    transition: 1s;
+    transition: transform 1s;
 }
 .text-rise.active{
     transform: translateY(0%);
@@ -299,7 +300,7 @@ main .landing-text h1 p span,
     background-color: var(--tertiary);
     clip-path: inset(50% 0 50% 0);
     padding: 4.5vh 0 4.5vh 16%;
-    transition: 0.3s;
+    transition: clip-path 0.3s;
 }
 .history .skills li:hover .history-mask{
     clip-path: inset(0% 0 0% 0);
@@ -363,7 +364,7 @@ main .landing-text h1 p span,
 }
 .companies .skills li>span{
     color: transparent;
-    transition: 0.5s;
+    transition: color 0.5s;
 }
 
 .my-skills .skills li:hover,
