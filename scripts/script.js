@@ -32,6 +32,7 @@ function animateScroll(){
     pageDist += dist * damping;
     
     main.style.transform = `translateY(${-pageDist}px)`;
+    // main.style.top = -(pageDist)+'px';
 }
 
 
@@ -279,18 +280,6 @@ document.getElementsByTagName('body')[0].onscroll = (e) => {
             persons[index].classList.remove('active');
         }
     });
-
-    (   
-        ()=>{
-            var dim = earth.getBoundingClientRect();
-            if (dim.y < viewHeight && dim.y > -(viewHeight)) {
-                
-                if(initRead === 0) initRead = pageDist;
-            
-                translateEarth = true;
-            }else translateEarth = false;
-        }
-    )();
 
     (
         ()=>{
